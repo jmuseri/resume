@@ -10,8 +10,8 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f0f0f0; /* Fondo claro */
-            color: #333; /* Texto oscuro */
+            background: #f0f0f0;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -19,31 +19,32 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #004080; /* Azul oscuro */
+            background-color: #004080;
             width: 100%;
             position: relative;
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #fff; /* Texto blanco */
+            color: #fff;
         }
         .contact {
             font-size: 1em;
-            color: #ddd; /* Texto claro */
+            color: #ddd;
         }
         .language-switch {
-            position: absolute;
-            top: 20px;
+            position: fixed;
+            bottom: 20px;
             right: 20px;
-            background: #fff; /* Fondo blanco */
+            background: #fff;
             border: none;
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         section {
-            background: #fff; /* Fondo blanco para secciones */
+            background: #fff;
             border-radius: 10px;
             margin: 20px;
             padding: 20px;
@@ -57,12 +58,12 @@
             border-radius: 50%;
             margin: 10px auto;
             display: block;
-            border: 3px solid #004080; /* Bordes del círculo */
+            border: 3px solid #004080;
         }
         h2 {
-            color: #004080; /* Azul oscuro */
+            color: #004080;
             margin-bottom: 10px;
-            border-bottom: 2px solid #004080; /* Línea debajo del título */
+            border-bottom: 2px solid #004080;
             padding-bottom: 5px;
         }
         ul.skills {
@@ -70,8 +71,8 @@
             padding: 0;
         }
         ul.skills li {
-            background: #004080; /* Azul oscuro */
-            color: #fff; /* Texto blanco */
+            background: #004080;
+            color: #fff;
             border-radius: 5px;
             margin: 5px 0;
             padding: 10px;
@@ -93,15 +94,16 @@
 </head>
 <body>
     <header>
-        <button class="language-switch" onclick="toggleLanguage()">ES/EN</button>
         <h1 id="name">Jonathan Museri</h1>
         <div class="contact">
             <p><i class="fas fa-phone"></i> +54 (9-11)5751 - 0068</p>
             <p><i class="fas fa-envelope"></i> <a href="mailto:jmuseri@hotmail.com" style="color: #FFD700;">jmuseri@hotmail.com</a></p>
             <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
-            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jonathanmuseri/" style="color: #FFD700;">LinkedIn Profile</a></p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jonathanmuseri/" target="_blank" style="color: #FFD700;">LinkedIn Profile</a></p>
         </div>
     </header>
+    
+    <button class="language-switch" id="language-button" onclick="toggleLanguage()">ES</button>
     
     <section>
         <img src="Profile Picture.jpg" alt="Jonathan Museri" class="photo">
@@ -112,9 +114,12 @@
 
     <section>
         <h2 id="education-heading">Education</h2>
-        <p><i class="fas fa-graduation-cap"></i> 2007 - Systems Licentiate Degree, CAECE University</p>
-        <p><i class="fas fa-graduation-cap"></i> 2001 - System Analyst, ORT Technological Institute</p>
-        <p><i class="fas fa-graduation-cap"></i> 1998 - Computer’s Technician, ORT Technical High School</p>
+        <p id="education-en">2007 - Systems Licentiate Degree, CAECE University</p>
+        <p id="education-es" style="display:none;">2007 - Licenciado en Sistemas, Universidad CAECE</p>
+        <p id="education-en-2">2001 - System Analyst, ORT Technological Institute</p>
+        <p id="education-es-2" style="display:none;">2001 - Analista de Sistemas, Instituto de Tecnología ORT</p>
+        <p id="education-en-3">1998 - Computer’s Technician, ORT Technical High School</p>
+        <p id="education-es-3" style="display:none;">1998 - Técnico en Computación, Escuela Técnica ORT</p>
     </section>
 
     <section>
@@ -149,109 +154,183 @@
     <section>
         <h2 id="certifications-heading">Certifications & Courses</h2>
         <ul>
-            <li><i class="fas fa-certificate"></i> 2022 - EFSET Advanced C1 Level</li>
-            <li><i class="fas fa-certificate"></i> 2010 - Certified Scrum Master (Scrum Alliance)</li>
-            <li><i class="fas fa-certificate"></i> 2008 - Java Sun J2EE Developer</li>
+		    <li><i class="fas fa-certificate"></i> 2024 - DevOps Diploma, Universidad Nacional de Córdoba <a href="MundosE Jonathan Museri.jpg" target="_blank" style="color: #004080;">(View Certificate)</a></li>
+            <li><i class="fas fa-certificate"></i> 2022 - EFSET Advanced C1 Level <a href="https://cert.efset.org/PmPJMV" target="_blank" style="color: #004080;">(View Certificate)</a></li>
+            <li><i class="fas fa-certificate"></i> 2010 - Certified Scrum Master (Scrum Alliance) <a href="Jonathan Museri-ScrumAlliance_CSM_Certificate.pdf" target="_blank" style="color: #004080;">(View Certificate)</a></li>
+            <li><i class="fas fa-certificate"></i> 2008 - Java Sun J2EE Developer </li>
             <li><i class="fas fa-certificate"></i> 2008 - Creating Web Services Using Java Technology</li>
             <li><i class="fas fa-certificate"></i> 2000 - Java Programming Language</li>
-            <li><i class="fas fa-certificate"></i> 2024 - DevOps Diploma, Universidad Nacional de Córdoba</li>
         </ul>
     </section>
 
     <section>
         <h2 id="experience-heading">Work Experience</h2>
-        <div class="experience">
-            <h3>Astropay</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Java Developer (Feb 2024 - Present)</p>
-            <p>Responsable de la integración de diversos métodos de transferencia y la operatividad de CVUs a través de un nuevo proveedor (PSP).</p>
-            <p>Technologies: IntelliJ, Jenkins, Jira, Notion, AWS, Kibana.</p>
+        <div class="experience" id="experience-astropay">
+            <h3>AstroPay</h3>
+            <p id="exp-title-en">Position: Java Developer (Feb 2024 - Present)</p>
+            <p id="exp-title-es" style="display:none;">Cargo: Desarrollador Java (Feb 2024 - Presente)</p>
+            <p id="exp-desc-en">Responsible for the integration of various transfer methods and the operation of CVUs through a new provider (PSP).</p>
+            <p id="exp-desc-es" style="display:none;">Responsable de la integración de diversos métodos de transferencia y la operatividad de CVUs a través de un nuevo proveedor (PSP).</p>
+            <p id="exp-tech-en">Technologies: IntelliJ, Jenkins, Jira, Notion, AWS, Kibana.</p>
+            <p id="exp-tech-es" style="display:none;">Tecnologías: IntelliJ, Jenkins, Jira, Notion, AWS, Kibana.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-banco-industrial">
             <h3>Banco Industrial SA</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Java Developer (Sep 2022 - Present)</p>
-            <p>Responsible for the Sales Front End application, defining coding standards for various internal projects.</p>
-            <p>Technologies: Java 8, MySQL, SpringMVC, AngularJS, Docker, Eclipse, Maven, Git.</p>
+            <p id="exp-title-en-2">Position: Java Developer (Sep 2022 - Present)</p>
+            <p id="exp-title-es-2" style="display:none;">Cargo: Desarrollador Java (Sep 2022 - Presente)</p>
+            <p id="exp-desc-en-2">Responsible for the Front End Sales application, defining coding standards for various internal projects.</p>
+            <p id="exp-desc-es-2" style="display:none;">Responsable de la aplicación Front End de Ventas, definiendo estándares de codificación para varios proyectos internos.</p>
+            <p id="exp-tech-en-2">Technologies: Java 8, MySQL, SpringMVC, AngularJS, Docker, Eclipse, Maven, Git.</p>
+            <p id="exp-tech-es-2" style="display:none;">Tecnologías: Java 8, MySQL, SpringMVC, AngularJS, Docker, Eclipse, Maven, Git.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-dataart">
             <h3>DataArt Inc</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Java Developer (Jan 2022 - Aug 2022)</p>
-            <p>Implemented plugins for the Compliance Conduct Solution system.</p>
-            <p>Technologies: Java 11, Springboot, Docker, IntelliJ, Gradle, Elasticsearch.</p>
+            <p id="exp-title-en-3">Position: Java Developer (Jan 2022 - Aug 2022)</p>
+            <p id="exp-title-es-3" style="display:none;">Cargo: Desarrollador Java (Ene 2022 - Ago 2022)</p>
+            <p id="exp-desc-en-3">Implementation of plugins for the Compliance Solutions system.</p>
+            <p id="exp-desc-es-3" style="display:none;">Implementación de complementos para el sistema de Soluciones de Conducta de Cumplimiento.</p>
+            <p id="exp-tech-en-3">Technologies: Java 11, Springboot, Docker, IntelliJ, Gradle, Elasticsearch.</p>
+            <p id="exp-tech-es-3" style="display:none;">Tecnologías: Java 11, Springboot, Docker, IntelliJ, Gradle, Elasticsearch.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-navent">
             <h3>Navent</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Sr Java Developer (Jun 2021 - Jan 2022)</p>
-            <p>Participated in modernizing the real estate backend system.</p>
-            <p>Technologies: Java 11, Springboot, Lombok, Hibernate, Oracle.</p>
+            <p id="exp-title-en-4">Position: Senior Java Developer (Jun 2021 - Jan 2022)</p>
+            <p id="exp-title-es-4" style="display:none;">Cargo: Desarrollador Java Sr. (Jun 2021 - Ene 2022)</p>
+            <p id="exp-desc-en-4">Participation in the modernization of the real estate backend system.</p>
+            <p id="exp-desc-es-4" style="display:none;">Participación en la modernización del sistema backend inmobiliario.</p>
+            <p id="exp-tech-en-4">Technologies: Java 11, Springboot, Lombok, Hibernate, Oracle.</p>
+            <p id="exp-tech-es-4" style="display:none;">Tecnologías: Java 11, Springboot, Lombok, Hibernate, Oracle.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-banco-credicoop">
             <h3>Banco Credicoop</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Team Leader and Java Developer (Jan 2020 - Jun 2021)</p>
-            <p>Led the team responsible for the GUV validation system, addressing performance issues and new requirements.</p>
-            <p>Technologies: Java 8, Tomcat, Spring Boot, Kafka.</p>
+            <p id="exp-title-en-5">Position: Team Leader and Java Developer (Jan 2020 - Jun 2021)</p>
+            <p id="exp-title-es-5" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (Ene 2020 - Jun 2021)</p>
+            <p id="exp-desc-en-5">Led the team responsible for the GUV validation system, addressing performance issues and new requirements.</p>
+            <p id="exp-desc-es-5" style="display:none;">Lideré el equipo responsable del sistema de validación GUV, abordando problemas de rendimiento y nuevos requisitos.</p>
+            <p id="exp-tech-en-5">Technologies: Java 8, Tomcat, Spring Boot, Kafka.</p>
+            <p id="exp-tech-es-5" style="display:none;">Tecnologías: Java 8, Tomcat, Spring Boot, Kafka.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-baufest">
             <h3>Baufest</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Team Leader and Java Developer (Jan 2019 - Dec 2019)</p>
-            <p>Participated in the BBVA Analog to Digital Migration Project.</p>
-            <p>Technologies: Java 6 & 8, Spring MVC, REST APIs.</p>
+            <p id="exp-title-en-6">Position: Team Leader and Java Developer (Jan 2019 - Dec 2019)</p>
+            <p id="exp-title-es-6" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (Ene 2019 - Dic 2019)</p>
+            <p id="exp-desc-en-6">Participation in the BBVA Migration Project from Analog to Digital.</p>
+            <p id="exp-desc-es-6" style="display:none;">Participación en el Proyecto de Migración de BBVA de Analógico a Digital.</p>
+            <p id="exp-tech-en-6">Technologies: Java 6 & 8, Spring MVC, REST APIs.</p>
+            <p id="exp-tech-es-6" style="display:none;">Tecnologías: Java 6 & 8, Spring MVC, REST APIs.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-textil-dai">
             <h3>Textil DaiVak SRL</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Operations Director (2013 - 2018)</p>
-            <p>Managed operations and coordinated resources for a family business.</p>
+            <p id="exp-title-en-7">Position: Operations Director (2013 - 2018)</p>
+            <p id="exp-title-es-7" style="display:none;">Cargo: Director de Operaciones (2013 - 2018)</p>
+            <p id="exp-desc-en-7">Management of operations and resource coordination for a family business.</p>
+            <p id="exp-desc-es-7" style="display:none;">Gestión de operaciones y coordinación de recursos para un negocio familiar.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-prokarma">
             <h3>Prokarma for Hughes Telematics, Inc</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Team Leader and Java Developer (2011 - 2013)</p>
-            <p>Led backend development and Scrum practices.</p>
+            <p id="exp-title-en-8">Position: Team Leader and Java Developer (2011 - 2013)</p>
+            <p id="exp-title-es-8" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (2011 - 2013)</p>
+            <p id="exp-desc-en-8">Led backend development and Scrum practices.</p>
+            <p id="exp-desc-es-8" style="display:none;">Lideré el desarrollo backend y las prácticas de Scrum.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-bairesdev">
             <h3>BairesDev for PLAYPHONE</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Java Developer (2011)</p>
-            <p>Developed backend for a social gaming platform.</p>
+            <p id="exp-title-en-9">Position: Java Developer (2011)</p>
+            <p id="exp-title-es-9" style="display:none;">Cargo: Desarrollador Java (2011)</p>
+            <p id="exp-desc-en-9">Backend development for a social gaming platform.</p>
+            <p id="exp-desc-es-9" style="display:none;">Desarrollo del backend para una plataforma de juegos sociales.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-verizon">
             <h3>VERIZON BUSINESS</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Java Engineer (2006 - 2009)</p>
-            <p>Worked on SmartGWT migrations and telephone number administration applications.</p>
+            <p id="exp-title-en-10">Position: Java Engineer (2006 - 2009)</p>
+            <p id="exp-title-es-10" style="display:none;">Cargo: Ingeniero Java (2006 - 2009)</p>
+            <p id="exp-desc-en-10">Work on SmartGWT migrations and phone number management applications.</p>
+            <p id="exp-desc-es-10" style="display:none;">Trabajo en migraciones de SmartGWT y aplicaciones de administración de números de teléfono.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-siemens">
             <h3>Siemens Itron Business Services</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Java Engineer (2005 - 2006)</p>
-            <p>Developed an Intranet and Extranet application for Global Collecting Services.</p>
+            <p id="exp-title-en-11">Position: Java Engineer (2005 - 2006)</p>
+            <p id="exp-title-es-11" style="display:none;">Cargo: Ingeniero Java (2005 - 2006)</p>
+            <p id="exp-desc-en-11">Development of an Intranet and Extranet application for Global Collection Services.</p>
+            <p id="exp-desc-es-11" style="display:none;">Desarrollo de una aplicación Intranet y Extranet para Servicios de Recolección Global.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-ibm">
             <h3>IBM</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Team Leader and Java Developer (2003 - 2006)</p>
-            <p>Coordinated maintenance for IBM's international incentive systems.</p>
+            <p id="exp-title-en-12">Position: Team Leader and Java Developer (2003 - 2006)</p>
+            <p id="exp-title-es-12" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (2003 - 2006)</p>
+            <p id="exp-desc-en-12">Coordination of maintenance for IBM's international incentive systems.</p>
+            <p id="exp-desc-es-12" style="display:none;">Coordinación del mantenimiento de los sistemas de incentivos internacionales de IBM.</p>
         </div>
-        <div class="experience">
+        <div class="experience" id="experience-decidir">
             <h3>Decidir.com</h3>
-            <p><i class="fas fa-briefcase"></i> Job Title: Team Leader and Java Developer (1999 - 2002)</p>
-            <p>Worked on various banking and commercial risk systems.</p>
+            <p id="exp-title-en-13">Position: Team Leader and Java Developer (1999 - 2002)</p>
+            <p id="exp-title-es-13" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (1999 - 2002)</p>
+            <p id="exp-desc-en-13">Work on various banking and commercial risk systems.</p>
+            <p id="exp-desc-es-13" style="display:none;">Trabajo en varios sistemas de riesgo bancario y comercial.</p>
         </div>
     </section>
 
     <script>
-        function toggleLanguage() {
-            const aboutTextEN = document.getElementById("about-text-en");
-            const aboutTextES = document.getElementById("about-text-es");
-            
-            if (aboutTextEN.style.display === "none") {
-                aboutTextEN.style.display = "block";
-                aboutTextES.style.display = "none";
-                document.getElementById("name").innerText = "Jonathan Museri";
-                document.getElementById("about-heading").innerText = "About";
-                // Update other headings and text for English
-            } else {
-                aboutTextEN.style.display = "none";
-                aboutTextES.style.display = "block";
-                document.getElementById("name").innerText = "Jonathan Museri";
-                document.getElementById("about-heading").innerText = "Acerca de";
-                // Update other headings and text for Spanish
-            }
-        }
+	function toggleLanguage() {
+		const aboutTextEN = document.getElementById("about-text-en");
+		const aboutTextES = document.getElementById("about-text-es");
+		const educationEN = document.getElementById("education-en");
+		const educationES = document.getElementById("education-es");
+		const educationEN2 = document.getElementById("education-en-2");
+		const educationES2 = document.getElementById("education-es-2");
+		const educationEN3 = document.getElementById("education-en-3");
+		const educationES3 = document.getElementById("education-es-3");
+		const experienceTitlesEN = document.querySelectorAll("[id$='-en']");
+		const experienceTitlesES = document.querySelectorAll("[id$='-es']");
+		const expDescriptionsEN = document.querySelectorAll("[id^='exp-desc-en']");
+		const expDescriptionsES = document.querySelectorAll("[id^='exp-desc-es']");
+		const expTechEN = document.querySelectorAll("[id^='exp-tech-en']");
+		const expTechES = document.querySelectorAll("[id^='exp-tech-es']");
+		const languageButton = document.getElementById("language-button");
+
+		if (aboutTextEN.style.display === "none") {
+			aboutTextEN.style.display = "block";
+			aboutTextES.style.display = "none";
+			educationEN.style.display = "block";
+			educationES.style.display = "none";
+			educationEN2.style.display = "block";
+			educationES2.style.display = "none";
+			educationEN3.style.display = "block";
+			educationES3.style.display = "none";
+			languageButton.innerText = "ES"; // Cambiar botón a "ES"
+
+			experienceTitlesEN.forEach(title => title.style.display = "block");
+			experienceTitlesES.forEach(title => title.style.display = "none");
+			expDescriptionsEN.forEach(desc => desc.style.display = "block");
+			expDescriptionsES.forEach(desc => desc.style.display = "none");
+			expTechEN.forEach(tech => tech.style.display = "block");
+			expTechES.forEach(tech => tech.style.display = "none");
+		} else {
+			aboutTextEN.style.display = "none";
+			aboutTextES.style.display = "block";
+			educationEN.style.display = "none";
+			educationES.style.display = "block";
+			educationEN2.style.display = "none";
+			educationES2.style.display = "block";
+			educationEN3.style.display = "none";
+			educationES3.style.display = "block";
+			languageButton.innerText = "EN"; // Cambiar botón a "EN"
+
+			experienceTitlesEN.forEach(title => title.style.display = "none");
+			experienceTitlesES.forEach(title => title.style.display = "block");
+			expDescriptionsEN.forEach(desc => desc.style.display = "none");
+			expDescriptionsES.forEach(desc => desc.style.display = "block");
+			expTechEN.forEach(tech => tech.style.display = "none");
+			expTechES.forEach(tech => tech.style.display = "block");
+		}
+	}
+
+	window.onload = function() {
+		const userLang = navigator.language || navigator.userLanguage;
+		if (userLang.startsWith('es')) {
+			toggleLanguage(); // Cambia al español si el idioma es español
+		}
+	};
     </script>
 </body>
 </html>
