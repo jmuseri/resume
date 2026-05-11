@@ -3,346 +3,1011 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Museri - CV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Jonathan Museri — Senior Java Backend Engineer | Fintech & Payments LATAM</title>
+    <meta name="description" content="Senior Java Backend Engineer with 20+ years of experience building payment platforms, microservices, and distributed systems. Expert in Spring Boot, AWS, Kubernetes, and fintech integrations across Latin America.">
+    <meta name="keywords" content="Java Developer, Spring Boot, Backend Engineer, Senior Java, Payment Processing, Fintech, Microservices, AWS, Kubernetes, New Relic, Grafana, MySQL, Redshift, LATAM, Buenos Aires">
+    <meta name="author" content="Jonathan Museri">
+    <meta property="og:title" content="Jonathan Museri — Senior Java Backend Engineer">
+    <meta property="og:description" content="20+ years building payment platforms and backend infrastructure. Expert in Java, Spring Boot, AWS, and fintech integrations across LATAM.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://jmuseri.github.io/resume/">
+    <link rel="canonical" href="https://jmuseri.github.io/resume/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jonathan Museri",
+      "jobTitle": "Senior Java Backend Engineer",
+      "email": "jmuseri@gmail.com",
+      "telephone": "+5491157510068",
+      "url": "https://jmuseri.github.io/resume/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jonathanmuseri/",
+        "https://github.com/jmuseri"
+      ],
+      "knowsAbout": [
+        "Java", "Spring Boot", "Microservices", "Payment Processing",
+        "AWS", "Kubernetes", "MySQL", "Amazon Redshift", "New Relic",
+        "Grafana", "Fintech", "REST APIs", "Distributed Systems"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "CAECE University"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary:       #0f172a;
+            --accent:        #2563eb;
+            --accent-light:  #dbeafe;
+            --accent-mid:    #93c5fd;
+            --text:          #1e293b;
+            --text-muted:    #64748b;
+            --border:        #e2e8f0;
+            --bg:            #f1f5f9;
+            --white:         #ffffff;
+            --green:         #059669;
+            --green-light:   #d1fae5;
+            --sidebar-bg:    #0f172a;
+            --sidebar-text:  #e2e8f0;
+            --sidebar-muted: #94a3b8;
+            --radius:        6px;
+            --font:          'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f0f0;
-            color: #333;
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ── LANG TOGGLE ── */
+        .lang-btn {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            color: var(--text);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: var(--font);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: all .2s;
+            letter-spacing: .5px;
+        }
+        .lang-btn:hover { background: var(--accent); color: var(--white); border-color: var(--accent); }
+
+        [data-lang] { display: none; }
+        .lang-en [data-lang="en"],
+        .lang-es [data-lang="es"] { display: revert; }
+
+        /* ── LAYOUT ── */
+        .page {
+            max-width: 1060px;
+            margin: 32px auto;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: auto 1fr;
+        }
+
+        /* ── HEADER ── */
+        .cv-header {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            padding: 36px 40px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 24px;
+        }
+
+        .cv-header-left h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -.5px;
+            line-height: 1.2;
+        }
+
+        .cv-header-left .title {
+            font-size: .95rem;
+            color: var(--accent-mid);
+            font-weight: 500;
+            margin-top: 6px;
+            letter-spacing: .2px;
+        }
+
+        .cv-header-left .tagline {
+            font-size: .82rem;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .cv-header-right {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            gap: 7px;
+            text-align: right;
         }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #004080;
-            width: 100%;
-            position: relative;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #fff;
-        }
-        .contact {
-            font-size: 1em;
-            color: #ddd;
-        }
-        .language-switch {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        section {
-            background: #fff;
-            border-radius: 10px;
-            margin: 20px;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 10px auto;
-            display: block;
-            border: 3px solid #004080;
-        }
-        h2 {
-            color: #004080;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #004080;
-            padding-bottom: 5px;
-        }
-        ul.skills {
-            list-style: none;
-            padding: 0;
-        }
-        ul.skills li {
-            background: #004080;
-            color: #fff;
-            border-radius: 5px;
-            margin: 5px 0;
-            padding: 10px;
+
+        .contact-item {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            font-size: .82rem;
+            color: #cbd5e1;
         }
-        ul.skills li i {
-            margin-right: 10px;
+
+        .contact-item a { color: #93c5fd; }
+        .contact-item a:hover { color: var(--white); }
+
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            opacity: .7;
+            flex-shrink: 0;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
+
+        /* ── SIDEBAR ── */
+        .sidebar {
+            background: #1e293b;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-section h2 {
+            font-size: .7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-mid);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #334155;
+        }
+
+        /* skills */
+        .skill-category { margin-bottom: 14px; }
+        .skill-category-label {
+            font-size: .72rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            margin-bottom: 6px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .skill-tag {
+            background: #0f172a;
+            color: #e2e8f0;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: .75rem;
+            font-family: var(--font-mono);
+            line-height: 1.4;
+        }
+        .skill-tag.accent {
+            background: #1e3a5f;
+            border-color: #2563eb;
+            color: #93c5fd;
+        }
+        .skill-tag.green {
+            background: #064e3b;
+            border-color: #059669;
+            color: #6ee7b7;
+        }
+
+        /* education */
+        .edu-item { margin-bottom: 12px; }
+        .edu-item .degree {
+            font-size: .82rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            line-height: 1.3;
+        }
+        .edu-item .institution {
+            font-size: .77rem;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+        .edu-item .year {
+            font-size: .72rem;
+            color: #64748b;
+            margin-top: 1px;
+        }
+
+        /* certifications */
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: .8rem;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+        .cert-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+        .cert-item a { color: #93c5fd; font-size: .72rem; }
+
+        /* languages */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .lang-name { font-size: .82rem; color: #e2e8f0; font-weight: 500; }
+        .lang-level {
+            font-size: .72rem;
+            background: #0f172a;
+            color: var(--accent-mid);
+            border: 1px solid #2563eb;
+            border-radius: 4px;
+            padding: 2px 7px;
+        }
+
+        /* ── MAIN ── */
+        .main {
+            padding: 32px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            overflow: hidden;
+        }
+
+        /* summary */
+        .summary-text {
+            font-size: .9rem;
+            line-height: 1.75;
+            color: var(--text);
+            background: linear-gradient(135deg, #f0f7ff, #e8f4fd);
+            border-left: 3px solid var(--accent);
+            padding: 16px 18px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        /* section headers */
+        .section-title {
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* experience */
+        .experience-list { display: flex; flex-direction: column; gap: 24px; }
+
+        .exp-item {
+            position: relative;
+            padding-left: 16px;
+            border-left: 2px solid var(--border);
+            transition: border-color .2s;
+        }
+        .exp-item:hover { border-left-color: var(--accent); }
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border);
+            border: 2px solid var(--white);
+            transition: background .2s;
+        }
+        .exp-item:hover::before,
+        .exp-item.current::before { background: var(--accent); }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 2px;
+        }
+
+        .exp-company {
+            font-size: .92rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .exp-company .for-client {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: .82rem;
+        }
+
+        .exp-date {
+            font-size: .75rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            font-family: var(--font-mono);
+            background: var(--bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+
+        .exp-role {
+            font-size: .82rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .exp-desc {
+            font-size: .82rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            line-height: 1.55;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .exp-bullets li {
+            font-size: .81rem;
+            color: var(--text);
+            line-height: 1.5;
+            padding-left: 14px;
+            position: relative;
+        }
+        .exp-bullets li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: .7rem;
+            top: 2px;
+        }
+        .exp-bullets code {
+            font-family: var(--font-mono);
+            font-size: .78rem;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+
+        .tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        .tech-pill {
+            font-size: .71rem;
+            font-family: var(--font-mono);
+            background: var(--bg);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 2px 7px;
+            line-height: 1.4;
+        }
+
+        .current-badge {
+            display: inline-block;
+            font-size: .65rem;
+            font-weight: 700;
+            background: var(--green-light);
+            color: var(--green);
+            border: 1px solid #6ee7b7;
+            padding: 1px 7px;
+            border-radius: 10px;
+            letter-spacing: .3px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .exp-condensed {
+            font-size: .8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ── PRINT ── */
+        @media print {
+            body { background: white; font-size: 11px; }
+            .page {
+                grid-template-columns: 220px 1fr;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+                max-width: none;
             }
-            section {
-                width: 95%;
+            .lang-btn { display: none; }
+            .cv-header { padding: 20px 28px 18px; }
+            .cv-header-left h1 { font-size: 1.5rem; }
+            .sidebar { padding: 20px 16px; gap: 20px; }
+            .main { padding: 20px 24px; gap: 18px; }
+            .exp-item { break-inside: avoid; }
+            a { color: inherit; text-decoration: none; }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .page {
+                grid-template-columns: 1fr;
+                margin: 0;
+                border-radius: 0;
             }
+            .cv-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cv-header-right { text-align: left; }
+            .contact-item { justify-content: flex-start; }
+            .lang-btn { top: 12px; right: 12px; }
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1 id="name">Jonathan Museri</h1>
-        <div class="contact">
-            <p>
-				<a href="https://wa.me/5491157510068" target="_blank" style="color: #FFD700;">
-					<i class="fab fa-whatsapp"></i> +54 (9-11) 5751 - 0068
-				</a>
-			</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:jmuseri@gmail.com" style="color: #FFD700;">jmuseri@gmail.com</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> Buenos Aires, Argentina</p>
-            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/jonathanmuseri/" target="_blank" style="color: #FFD700;">LinkedIn Profile</a></p>
-        </div>
-    </header>
-    
-    <button class="language-switch" id="language-button" onclick="toggleLanguage()">ES</button>
-    
-    <section>
-        <img src="Profile Picture.jpg" alt="Jonathan Museri" class="photo">
-        <h2 id="about-heading">About</h2>
-        <div id="about-text-en">
-			<p>As a Systems graduate, I have acquired a vast experience in backend development, especially in Java. This is one of my great passions and strengths. In addition to my technical expertise, I have had the opportunity to lead teams, which has allowed me to cultivate a collaborative work environment focused on user satisfaction and achieving results.</p>
+<body class="lang-en">
 
-			<p>I maintain a constant commitment to continuous improvement and resource optimization, never losing sight of the importance of trust and loyalty within the organizational structure. I aspire to take on management roles in the future, where I can leverage both my technical skills and my leadership abilities to contribute to the company's success. My goal is to ensure that every decision is perfectly aligned with the needs of users and the strategic objectives of the organization.</p>
-		</div>
-        <div id="about-text-es" style="display:none;">
-			<p>Como Licenciado en Sistemas, he adquirido una vasta experiencia en desarrollo backend, especialmente en Java. Esta es una de mis grandes pasiones y fortalezas. Además de mi pericia técnica, he tenido la oportunidad de liderar equipos, lo cual me ha permitido cultivar un entorno de trabajo colaborativo y enfocado en la satisfacción del usuario y el logro de resultados.</p>
+    <button class="lang-btn" id="lang-btn" onclick="toggleLang()" aria-label="Switch language">ES</button>
 
-			<p>Mantengo un compromiso constante con la mejora continua y la optimización de recursos, sin perder nunca de vista la importancia de la confianza y la lealtad dentro de la estructura organizacional. Aspiro a asumir roles de gestión en el futuro, donde pueda aprovechar tanto mis habilidades técnicas como mis capacidades de liderazgo para contribuir al éxito de la empresa. Mi objetivo es asegurarme de que cada decisión esté perfectamente alineada con las necesidades de los usuarios y los objetivos estratégicos de la organización.</p>
-		</div>
-    </section>
+    <div class="page">
 
-    <section>
-        <h2 id="education-heading">Education</h2>
-        <p id="education-en">2007 - Systems Licentiate Degree, CAECE University</p>
-        <p id="education-es" style="display:none;">2007 - Licenciado en Sistemas, Universidad CAECE</p>
-        <p id="education-en-2">2001 - System Analyst, ORT Technological Institute</p>
-        <p id="education-es-2" style="display:none;">2001 - Analista de Sistemas, Instituto de Tecnología ORT</p>
-        <p id="education-en-3">1998 - Computer’s Technician, ORT Technical High School</p>
-        <p id="education-es-3" style="display:none;">1998 - Técnico en Computación, Escuela Técnica ORT</p>
-    </section>
+        <!-- ═══════════════════════════════════════ HEADER -->
+        <header class="cv-header">
+            <div class="cv-header-left">
+                <h1>Jonathan Museri</h1>
+                <p class="title">Senior Java Backend Engineer</p>
+                <p class="tagline">
+                    <span data-lang="en">20+ years · Payment Platforms · Fintech · Microservices · LATAM</span>
+                    <span data-lang="es">20+ años · Plataformas de Pago · Fintech · Microservicios · LATAM</span>
+                </p>
+            </div>
+            <div class="cv-header-right">
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <a href="mailto:jmuseri@gmail.com">jmuseri@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17z"/></svg>
+                    <a href="https://wa.me/5491157510068">+54 9 11 5751-0068</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <a href="https://www.linkedin.com/in/jonathanmuseri/" target="_blank">linkedin.com/in/jonathanmuseri</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <a href="https://github.com/jmuseri" target="_blank">github.com/jmuseri</a>
+                </div>
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Buenos Aires, Argentina</span>
+                </div>
+            </div>
+        </header>
 
-    <section>
-        <h2 id="languages-heading">Languages</h2>
-        <p><i class="fas fa-language"></i> English – C1 Advanced (Certified at EFSET)</p>
-        <p><i class="fas fa-language"></i> Spanish – Native</p>
-    </section>
+        <!-- ═══════════════════════════════════════ SIDEBAR -->
+        <aside class="sidebar">
 
-    <section>
-        <h2 id="skills-heading">Skills</h2>
-        <ul class="skills">
-            <li><i class="fab fa-java"></i> Java Developer</li>
-            <li><i class="fab fa-java"></i> SpringBoot</li>
-            <li><i class="fab fa-java"></i> Hibernate</li>
-            <li><i class="fab fa-java"></i> Lombok</li>
-            <li><i class="fas fa-database"></i> SQL Databases</li>
-            <li><i class="fas fa-database"></i> MongoDB</li>
-            <li><i class="fas fa-cog"></i> Junit</li>
-            <li><i class="fab fa-git"></i> Git / SVN / CVS</li>
-            <li><i class="fab fa-maven"></i> Maven / Gradle</li>
-            <li><i class="fas fa-project-diagram"></i> Scrum / Agile methodology</li>
-            <li><i class="fas fa-users-cog"></i> Scrum Master</li>
-            <li><i class="fab fa-jira"></i> Jira / Trello</li>
-            <li><i class="fab fa-jenkins"></i> Jenkins</li>
-            <li><i class="fab fa-aws"></i> AWS</li>
-            <li><i class="fas fa-chart-line"></i> Kibana</li>
-            <li><i class="fas fa-users"></i> Leadership</li>
-            <li><i class="fas fa-users"></i> Team Work</li>
-        </ul>
-    </section>
+            <!-- Skills -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Technical Skills</span><span data-lang="es">Habilidades Técnicas</span></h2>
 
-    <section>
-        <h2 id="certifications-heading">Certifications & Courses</h2>
-        <ul>
-		    <li><i class="fas fa-certificate"></i> 2024 - DevOps Diploma, Universidad Nacional de Córdoba <a href="MundosE Jonathan Museri.jpg" target="_blank" style="color: #004080;">(View Certificate)</a></li>
-            <li><i class="fas fa-certificate"></i> 2022 - EFSET Advanced C1 Level <a href="https://cert.efset.org/PmPJMV" target="_blank" style="color: #004080;">(View Certificate)</a></li>
-            <li><i class="fas fa-certificate"></i> 2010 - Certified Scrum Master (Scrum Alliance) <a href="Jonathan Museri-ScrumAlliance_CSM_Certificate.pdf" target="_blank" style="color: #004080;">(View Certificate)</a></li>
-            <li><i class="fas fa-certificate"></i> 2008 - Java Sun J2EE Developer </li>
-            <li><i class="fas fa-certificate"></i> 2008 - Creating Web Services Using Java Technology</li>
-            <li><i class="fas fa-certificate"></i> 2000 - Java Programming Language</li>
-        </ul>
-    </section>
+                <div class="skill-category">
+                    <div class="skill-category-label">Core</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag accent">Java 17/21</span>
+                        <span class="skill-tag accent">Spring Boot</span>
+                        <span class="skill-tag">Spring Data JPA</span>
+                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag">Lombok</span>
+                        <span class="skill-tag">Java Records</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Webhooks / IPNs</span>
+                    </div>
+                </div>
 
-    <section>
-        <h2 id="experience-heading">Work Experience</h2>
-        <div class="experience" id="experience-astropay">
-            <h3>AstroPay</h3>
-            <p id="exp-title-en">Position: Java Developer (Feb 2024 - Present)</p>
-            <p id="exp-title-es" style="display:none;">Cargo: Desarrollador Java (Feb 2024 - Presente)</p>
-            <p id="exp-desc-en">Responsible for the integration of various transfer methods and the operation of CVUs through a new provider (PSP).</p>
-            <p id="exp-desc-es" style="display:none;">Responsable de la integración de diversos métodos de transferencia y la operatividad de CVUs a través de un nuevo proveedor (PSP).</p>
-            <p id="exp-tech-en">Technologies: IntelliJ, Jenkins, Jira, Notion, AWS, Kibana.</p>
-            <p id="exp-tech-es" style="display:none;">Tecnologías: IntelliJ, Jenkins, Jira, Notion, AWS, Kibana.</p>
-        </div>
-        <div class="experience" id="experience-banco-industrial">
-            <h3>Banco Industrial SA</h3>
-            <p id="exp-title-en-2">Position: Java Developer (Sep 2022 - Present)</p>
-            <p id="exp-title-es-2" style="display:none;">Cargo: Desarrollador Java (Sep 2022 - Presente)</p>
-            <p id="exp-desc-en-2">Responsible for the Front End Sales application, defining coding standards for various internal projects.</p>
-            <p id="exp-desc-es-2" style="display:none;">Responsable de la aplicación Front End de Ventas, definiendo estándares de codificación para varios proyectos internos.</p>
-            <p id="exp-tech-en-2">Technologies: Java 8, MySQL, SpringMVC, AngularJS, Docker, Eclipse, Maven, Git.</p>
-            <p id="exp-tech-es-2" style="display:none;">Tecnologías: Java 8, MySQL, SpringMVC, AngularJS, Docker, Eclipse, Maven, Git.</p>
-        </div>
-        <div class="experience" id="experience-dataart">
-            <h3>DataArt Inc</h3>
-            <p id="exp-title-en-3">Position: Java Developer (Jan 2022 - Aug 2022)</p>
-            <p id="exp-title-es-3" style="display:none;">Cargo: Desarrollador Java (Ene 2022 - Ago 2022)</p>
-            <p id="exp-desc-en-3">Implementation of plugins for the Compliance Solutions system.</p>
-            <p id="exp-desc-es-3" style="display:none;">Implementación de complementos para el sistema de Soluciones de Conducta de Cumplimiento.</p>
-            <p id="exp-tech-en-3">Technologies: Java 11, Springboot, Docker, IntelliJ, Gradle, Elasticsearch.</p>
-            <p id="exp-tech-es-3" style="display:none;">Tecnologías: Java 11, Springboot, Docker, IntelliJ, Gradle, Elasticsearch.</p>
-        </div>
-        <div class="experience" id="experience-navent">
-            <h3>Navent</h3>
-            <p id="exp-title-en-4">Position: Senior Java Developer (Jun 2021 - Jan 2022)</p>
-            <p id="exp-title-es-4" style="display:none;">Cargo: Desarrollador Java Sr. (Jun 2021 - Ene 2022)</p>
-            <p id="exp-desc-en-4">Participation in the modernization of the real estate backend system.</p>
-            <p id="exp-desc-es-4" style="display:none;">Participación en la modernización del sistema backend inmobiliario.</p>
-            <p id="exp-tech-en-4">Technologies: Java 11, Springboot, Lombok, Hibernate, Oracle.</p>
-            <p id="exp-tech-es-4" style="display:none;">Tecnologías: Java 11, Springboot, Lombok, Hibernate, Oracle.</p>
-        </div>
-        <div class="experience" id="experience-banco-credicoop">
-            <h3>Banco Credicoop</h3>
-            <p id="exp-title-en-5">Position: Team Leader and Java Developer (Jan 2020 - Jun 2021)</p>
-            <p id="exp-title-es-5" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (Ene 2020 - Jun 2021)</p>
-            <p id="exp-desc-en-5">Led the team responsible for the GUV validation system, addressing performance issues and new requirements.</p>
-            <p id="exp-desc-es-5" style="display:none;">Lideré el equipo responsable del sistema de validación GUV, abordando problemas de rendimiento y nuevos requisitos.</p>
-            <p id="exp-tech-en-5">Technologies: Java 8, Tomcat, Spring Boot, Kafka.</p>
-            <p id="exp-tech-es-5" style="display:none;">Tecnologías: Java 8, Tomcat, Spring Boot, Kafka.</p>
-        </div>
-        <div class="experience" id="experience-baufest">
-            <h3>Baufest</h3>
-            <p id="exp-title-en-6">Position: Team Leader and Java Developer (Jan 2019 - Dec 2019)</p>
-            <p id="exp-title-es-6" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (Ene 2019 - Dic 2019)</p>
-            <p id="exp-desc-en-6">Participation in the BBVA Migration Project from Analog to Digital.</p>
-            <p id="exp-desc-es-6" style="display:none;">Participación en el Proyecto de Migración de BBVA de Analógico a Digital.</p>
-            <p id="exp-tech-en-6">Technologies: Java 6 & 8, Spring MVC, REST APIs.</p>
-            <p id="exp-tech-es-6" style="display:none;">Tecnologías: Java 6 & 8, Spring MVC, REST APIs.</p>
-        </div>
-        <div class="experience" id="experience-textil-dai">
-            <h3>Textil DaiVak SRL</h3>
-            <p id="exp-title-en-7">Position: Operations Director (2013 - 2018)</p>
-            <p id="exp-title-es-7" style="display:none;">Cargo: Director de Operaciones (2013 - 2018)</p>
-            <p id="exp-desc-en-7">Management of operations and resource coordination for a family business.</p>
-            <p id="exp-desc-es-7" style="display:none;">Gestión de operaciones y coordinación de recursos para un negocio familiar.</p>
-        </div>
-        <div class="experience" id="experience-prokarma">
-            <h3>Prokarma for Hughes Telematics, Inc</h3>
-            <p id="exp-title-en-8">Position: Team Leader and Java Developer (2011 - 2013)</p>
-            <p id="exp-title-es-8" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (2011 - 2013)</p>
-            <p id="exp-desc-en-8">Led backend development and Scrum practices.</p>
-            <p id="exp-desc-es-8" style="display:none;">Lideré el desarrollo backend y las prácticas de Scrum.</p>
-        </div>
-        <div class="experience" id="experience-bairesdev">
-            <h3>BairesDev for PLAYPHONE</h3>
-            <p id="exp-title-en-9">Position: Java Developer (2011)</p>
-            <p id="exp-title-es-9" style="display:none;">Cargo: Desarrollador Java (2011)</p>
-            <p id="exp-desc-en-9">Backend development for a social gaming platform.</p>
-            <p id="exp-desc-es-9" style="display:none;">Desarrollo del backend para una plataforma de juegos sociales.</p>
-        </div>
-        <div class="experience" id="experience-verizon">
-            <h3>VERIZON BUSINESS</h3>
-            <p id="exp-title-en-10">Position: Java Engineer (2006 - 2009)</p>
-            <p id="exp-title-es-10" style="display:none;">Cargo: Ingeniero Java (2006 - 2009)</p>
-            <p id="exp-desc-en-10">Work on SmartGWT migrations and phone number management applications.</p>
-            <p id="exp-desc-es-10" style="display:none;">Trabajo en migraciones de SmartGWT y aplicaciones de administración de números de teléfono.</p>
-        </div>
-        <div class="experience" id="experience-siemens">
-            <h3>Siemens Itron Business Services</h3>
-            <p id="exp-title-en-11">Position: Java Engineer (2005 - 2006)</p>
-            <p id="exp-title-es-11" style="display:none;">Cargo: Ingeniero Java (2005 - 2006)</p>
-            <p id="exp-desc-en-11">Development of an Intranet and Extranet application for Global Collection Services.</p>
-            <p id="exp-desc-es-11" style="display:none;">Desarrollo de una aplicación Intranet y Extranet para Servicios de Recolección Global.</p>
-        </div>
-        <div class="experience" id="experience-ibm">
-            <h3>IBM</h3>
-            <p id="exp-title-en-12">Position: Team Leader and Java Developer (2003 - 2006)</p>
-            <p id="exp-title-es-12" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (2003 - 2006)</p>
-            <p id="exp-desc-en-12">Coordination of maintenance for IBM's international incentive systems.</p>
-            <p id="exp-desc-es-12" style="display:none;">Coordinación del mantenimiento de los sistemas de incentivos internacionales de IBM.</p>
-        </div>
-        <div class="experience" id="experience-decidir">
-            <h3>Decidir.com</h3>
-            <p id="exp-title-en-13">Position: Team Leader and Java Developer (1999 - 2002)</p>
-            <p id="exp-title-es-13" style="display:none;">Cargo: Líder de Equipo y Desarrollador Java (1999 - 2002)</p>
-            <p id="exp-desc-en-13">Work on various banking and commercial risk systems.</p>
-            <p id="exp-desc-es-13" style="display:none;">Trabajo en varios sistemas de riesgo bancario y comercial.</p>
-        </div>
-    </section>
+                <div class="skill-category">
+                    <div class="skill-category-label">Cloud &amp; Infra</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag accent">AWS</span>
+                        <span class="skill-tag">Secrets Manager</span>
+                        <span class="skill-tag">Glue / EMR</span>
+                        <span class="skill-tag accent">Kubernetes</span>
+                        <span class="skill-tag">Kustomize</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Amazon Redshift</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Elasticsearch</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Observability</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag accent">New Relic</span>
+                        <span class="skill-tag accent">Grafana / Loki</span>
+                        <span class="skill-tag">NRQL</span>
+                        <span class="skill-tag">LogQL</span>
+                        <span class="skill-tag">Kibana</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Messaging &amp; Arch</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Event-Driven</span>
+                        <span class="skill-tag">Multi-Gateway Routing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">AI-Augmented Eng.</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag green">Claude Code</span>
+                        <span class="skill-tag green">Multi-Agent AI</span>
+                        <span class="skill-tag green">Windsurf IDE</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Practices</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Clean Code</span>
+                        <span class="skill-tag">Scrum / Agile</span>
+                        <span class="skill-tag">Code Review</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Maven / Gradle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Education</span><span data-lang="es">Educación</span></h2>
+                <div class="edu-item">
+                    <div class="degree">
+                        <span data-lang="en">Systems Licentiate Degree</span>
+                        <span data-lang="es">Licenciado en Sistemas</span>
+                    </div>
+                    <div class="institution">CAECE University</div>
+                    <div class="year">2007</div>
+                </div>
+                <div class="edu-item">
+                    <div class="degree">
+                        <span data-lang="en">System Analyst</span>
+                        <span data-lang="es">Analista de Sistemas</span>
+                    </div>
+                    <div class="institution">ORT Technological Institute</div>
+                    <div class="year">2001</div>
+                </div>
+                <div class="edu-item">
+                    <div class="degree">
+                        <span data-lang="en">Computer Technician</span>
+                        <span data-lang="es">Técnico en Computación</span>
+                    </div>
+                    <div class="institution">ORT Technical High School</div>
+                    <div class="year">1998</div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Languages</span><span data-lang="es">Idiomas</span></h2>
+                <div class="lang-item">
+                    <span class="lang-name">
+                        <span data-lang="en">Spanish</span>
+                        <span data-lang="es">Español</span>
+                    </span>
+                    <span class="lang-level">
+                        <span data-lang="en">Native</span>
+                        <span data-lang="es">Nativo</span>
+                    </span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">C1 Advanced</span>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Certifications</span><span data-lang="es">Certificaciones</span></h2>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <span data-lang="en">DevOps Diploma — UNC</span>
+                        <span data-lang="es">Diplomatura DevOps — UNC</span>
+                        <br><span style="color:#64748b;font-size:.72rem;">2024 · <a href="MundosE Jonathan Museri.jpg" target="_blank">View</a></span>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>
+                        EFSET English C1 Advanced
+                        <br><span style="color:#64748b;font-size:.72rem;">2022 · <a href="https://cert.efset.org/PmPJMV" target="_blank">View</a></span>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>
+                        Certified Scrum Master — Scrum Alliance
+                        <br><span style="color:#64748b;font-size:.72rem;">2010 · <a href="Jonathan Museri-ScrumAlliance_CSM_Certificate.pdf" target="_blank">View</a></span>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>Java Sun J2EE Developer <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>Creating Web Services with Java <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- ═══════════════════════════════════════ MAIN -->
+        <main class="main">
+
+            <!-- Summary -->
+            <section aria-label="Professional Summary">
+                <div class="section-title">
+                    <span data-lang="en">Professional Summary</span>
+                    <span data-lang="es">Resumen Profesional</span>
+                </div>
+                <p class="summary-text" data-lang="en">
+                    Senior Java Backend Engineer with <strong>20+ years</strong> of experience building high-availability payment platforms, microservices, and distributed systems. Currently architecting and maintaining a multi-country LATAM payment platform handling deposits, cashouts, and provider integrations across 10+ countries. Strong track record in production incident root-cause analysis, clean code practices, and adopting AI-augmented engineering workflows to accelerate delivery and reduce MTTR.
+                </p>
+                <p class="summary-text" data-lang="es">
+                    Ingeniero Backend Java Senior con <strong>más de 20 años</strong> de experiencia construyendo plataformas de pago de alta disponibilidad, microservicios y sistemas distribuidos. Actualmente arquitecto y mantengo una plataforma de pagos LATAM multi-país que gestiona depósitos, cashouts e integraciones con proveedores en más de 10 países. Sólida trayectoria en análisis de causa raíz de incidentes en producción, prácticas de clean code y adopción de workflows de ingeniería asistida por IA.
+                </p>
+            </section>
+
+            <!-- Experience -->
+            <section aria-label="Work Experience">
+                <div class="section-title">
+                    <span data-lang="en">Work Experience</span>
+                    <span data-lang="es">Experiencia Laboral</span>
+                </div>
+
+                <div class="experience-list">
+
+                    <!-- ERON International -->
+                    <div class="exp-item current">
+                        <div class="exp-header">
+                            <div>
+                                <span class="exp-company">
+                                    ERON International
+                                    <span class="current-badge">
+                                        <span data-lang="en">Current</span>
+                                        <span data-lang="es">Actual</span>
+                                    </span>
+                                </span>
+                            </div>
+                            <span class="exp-date">Apr 2025 – Present</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Senior Java Backend Engineer — Directa24 Payments Platform</span>
+                            <span data-lang="es">Ingeniero Backend Java Senior — Plataforma de Pagos Directa24</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li data-lang="en">Engineer and maintain integrations with 10+ LATAM payment providers (Nequi, Colprocesa, PSE, QR payments) within a microservices platform processing deposits and cashouts across multiple countries</li>
+                            <li data-lang="es">Diseño y mantengo integraciones con más de 10 proveedores de pago LATAM (Nequi, Colprocesa, PSE, pagos QR) en una plataforma de microservicios que procesa depósitos y cashouts en múltiples países</li>
+                            <li data-lang="en">Diagnosed a critical race condition causing orphaned payments on Nequi QR (Colombia): HTTP provider call inside <code>@Transactional</code> triggered silent rollbacks on timeout; confirmed via Grafana/Loki log correlation and MySQL AUTO_INCREMENT gap analysis directly in production</li>
+                            <li data-lang="es">Diagnostiqué una race condition crítica causando pagos huérfanos en Nequi QR (Colombia): HTTP call al proveedor dentro de <code>@Transactional</code> generaba rollbacks silenciosos; confirmado via correlación de logs Grafana/Loki y análisis de gaps AUTO_INCREMENT en producción</li>
+                            <li data-lang="en">Resolved a Zendesk ticket integration failure affecting merchants across Panama and Guatemala — implemented merchant email fallback logic and silent error UX fix; coordinated full-stack deploy across 7 white-label panels</li>
+                            <li data-lang="es">Resolví un fallo de integración Zendesk que afectaba a merchants en Panamá y Guatemala — implementé fallback de email del merchant y fix de error silencioso en UI; coordiné deploy fullstack en 7 paneles white-label</li>
+                            <li data-lang="en">Adopted AI-augmented engineering with Claude Code multi-agent pipelines, parallelizing New Relic + Grafana/Loki + Redshift queries during incident investigations — reducing MTTR from hours to minutes</li>
+                            <li data-lang="es">Adopté ingeniería asistida por IA con pipelines multi-agente de Claude Code, paralelizando consultas a New Relic + Grafana/Loki + Redshift durante investigaciones de incidentes — reduciendo el MTTR de horas a minutos</li>
+                            <li data-lang="en">Maintain 15+ Java/Spring Boot microservices (<code>cash-gateway</code>, <code>cashout-gateway</code>, <code>cashin-internal</code>, <code>merchant-panel</code>) deployed on Kubernetes with Kustomize overlays per environment</li>
+                            <li data-lang="es">Mantengo más de 15 microservicios Java/Spring Boot (<code>cash-gateway</code>, <code>cashout-gateway</code>, <code>cashin-internal</code>, <code>merchant-panel</code>) desplegados en Kubernetes con overlays Kustomize por ambiente</li>
+                            <li data-lang="en">Lead code reviews enforcing team clean code conventions: guard clauses, <code>@RequiredArgsConstructor</code>, Java Records for DTOs, Rule of 30, no magic values</li>
+                            <li data-lang="es">Lidero code reviews aplicando convenciones de clean code del equipo: guard clauses, <code>@RequiredArgsConstructor</code>, Java Records para DTOs, Regla de 30, sin magic values</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java 17</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">Amazon Redshift</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Kubernetes</span>
+                            <span class="tech-pill">Kustomize</span>
+                            <span class="tech-pill">New Relic</span>
+                            <span class="tech-pill">Grafana / Loki</span>
+                            <span class="tech-pill">Claude Code</span>
+                            <span class="tech-pill">Windsurf</span>
+                        </div>
+                    </div>
+
+                    <!-- AstroPay -->
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company">AstroPay</span>
+                            <span class="exp-date">Feb 2024 – Mar 2025</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Java Developer</span>
+                            <span data-lang="es">Desarrollador Java</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li data-lang="en">Owned end-to-end integration of BIND (Banco Industrial) as the new PSP for CVU operations and inter-account transfers in Argentina — from provider API design to production rollout</li>
+                            <li data-lang="es">Desarrollé de punta a punta la integración de BIND (Banco Industrial) como nuevo PSP para operaciones CVU y transferencias entre cuentas en Argentina — desde el diseño de la API del proveedor hasta el rollout en producción</li>
+                            <li data-lang="en">Designed the new CVU flow to coexist with the legacy Banco Coinag integration during the transition period, then led the full migration until BIND became the sole provider</li>
+                            <li data-lang="es">Diseñé el nuevo flujo CVU para coexistir con la integración legacy de Banco Coinag durante la transición, luego lideré la migración completa hasta que BIND reemplazó al proveedor anterior</li>
+                            <li data-lang="en">Also contributed to cashin and cashout flows within the platform alongside the CVU initiative</li>
+                            <li data-lang="es">Contribuí además a flujos de cashin y cashout dentro de la plataforma en paralelo a la iniciativa de CVU</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">CVU / COELSA</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Jenkins</span>
+                            <span class="tech-pill">Kibana</span>
+                        </div>
+                    </div>
+
+                    <!-- Banco Industrial -->
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company">Banco Industrial SA</span>
+                            <span class="exp-date">Sep 2022 – Jan 2024</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Java Developer</span>
+                            <span data-lang="es">Desarrollador Java</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li data-lang="en">Owned the front-end Sales application and established coding standards across multiple internal projects</li>
+                            <li data-lang="es">Responsable de la aplicación de Ventas y definición de estándares de codificación para proyectos internos</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java 8</span>
+                            <span class="tech-pill">Spring MVC</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">AngularJS</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">Maven</span>
+                        </div>
+                    </div>
+
+                    <!-- DataArt -->
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company">DataArt Inc</span>
+                            <span class="exp-date">Jan 2022 – Aug 2022</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Java Developer</span>
+                            <span data-lang="es">Desarrollador Java</span>
+                        </div>
+                        <p class="exp-desc" data-lang="en">Developed compliance solution plugins integrated into a regulatory reporting system.</p>
+                        <p class="exp-desc" data-lang="es">Desarrollo de plugins de soluciones de cumplimiento normativo integrados en un sistema de reporte regulatorio.</p>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java 11</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">Gradle</span>
+                            <span class="tech-pill">Elasticsearch</span>
+                        </div>
+                    </div>
+
+                    <!-- Navent -->
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company">Navent</span>
+                            <span class="exp-date">Jun 2021 – Jan 2022</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Senior Java Developer</span>
+                            <span data-lang="es">Desarrollador Java Senior</span>
+                        </div>
+                        <p class="exp-desc" data-lang="en">Led modernization of the real estate backend system (ZonaProp / Inmuebles24), migrating legacy services to Spring Boot microservices.</p>
+                        <p class="exp-desc" data-lang="es">Lideré la modernización del backend inmobiliario (ZonaProp / Inmuebles24), migrando servicios legacy a microservicios Spring Boot.</p>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java 11</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">Lombok</span>
+                            <span class="tech-pill">Hibernate</span>
+                            <span class="tech-pill">Oracle</span>
+                        </div>
+                    </div>
+
+                    <!-- Banco Credicoop -->
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company">Banco Credicoop</span>
+                            <span class="exp-date">Jan 2020 – Jun 2021</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Team Leader &amp; Java Developer</span>
+                            <span data-lang="es">Líder de Equipo y Desarrollador Java</span>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li data-lang="en">Led the team responsible for the GUV validation system, resolving critical performance bottlenecks and delivering new regulatory requirements on schedule</li>
+                            <li data-lang="es">Lideré el equipo responsable del sistema de validación GUV, resolviendo cuellos de botella de rendimiento críticos y entregando nuevos requisitos regulatorios en tiempo</li>
+                        </ul>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java 8</span>
+                            <span class="tech-pill">Spring Boot</span>
+                            <span class="tech-pill">Kafka</span>
+                            <span class="tech-pill">Tomcat</span>
+                        </div>
+                    </div>
+
+                    <!-- Baufest / BBVA -->
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <span class="exp-company">Baufest <span class="for-client">for BBVA</span></span>
+                            <span class="exp-date">Jan 2019 – Dec 2019</span>
+                        </div>
+                        <div class="exp-role">
+                            <span data-lang="en">Team Leader &amp; Java Developer</span>
+                            <span data-lang="es">Líder de Equipo y Desarrollador Java</span>
+                        </div>
+                        <p class="exp-desc" data-lang="en">BBVA digital transformation project — migrating analog banking processes to REST microservices.</p>
+                        <p class="exp-desc" data-lang="es">Proyecto de transformación digital BBVA — migración de procesos bancarios analógicos a microservicios REST.</p>
+                        <div class="tech-pills">
+                            <span class="tech-pill">Java 8</span>
+                            <span class="tech-pill">Spring MVC</span>
+                            <span class="tech-pill">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Earlier experience (condensed) -->
+                    <div class="exp-item">
+                        <div class="section-title" style="margin-bottom:12px;">
+                            <span data-lang="en">Earlier Experience</span>
+                            <span data-lang="es">Experiencia Anterior</span>
+                        </div>
+
+                        <div class="exp-condensed">
+                            <p style="margin-bottom:8px;">
+                                <strong>ProKarma</strong> <span style="color:var(--text-muted)">for Hughes Telematics, Inc</span>
+                                — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
+                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2011–2013</span><br>
+                                <span data-lang="en">Led backend development for a telematics platform. Introduced Scrum practices to the team.</span>
+                                <span data-lang="es">Lideré el backend de una plataforma de telemática. Introduje prácticas Scrum al equipo.</span>
+                            </p>
+                            <p style="margin-bottom:8px;">
+                                <strong>BairesDev</strong> <span style="color:var(--text-muted)">for PLAYPHONE</span>
+                                — <span data-lang="en">Java Developer</span><span data-lang="es">Desarrollador Java</span>
+                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2011</span><br>
+                                <span data-lang="en">Backend development for a social gaming platform.</span>
+                                <span data-lang="es">Backend de una plataforma de juegos sociales.</span>
+                            </p>
+                            <p style="margin-bottom:8px;">
+                                <strong>Verizon Business</strong>
+                                — <span data-lang="en">Java Engineer</span><span data-lang="es">Ingeniero Java</span>
+                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2006–2009</span><br>
+                                <span data-lang="en">SmartGWT migrations and phone number management applications.</span>
+                                <span data-lang="es">Migraciones SmartGWT y aplicaciones de gestión de numeración telefónica.</span>
+                            </p>
+                            <p style="margin-bottom:8px;">
+                                <strong>Siemens Itron Business Services</strong>
+                                — <span data-lang="en">Java Engineer</span><span data-lang="es">Ingeniero Java</span>
+                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2005–2006</span><br>
+                                <span data-lang="en">Intranet/Extranet for Global Collection Services.</span>
+                                <span data-lang="es">Intranet/Extranet para Servicios Globales de Cobranza.</span>
+                            </p>
+                            <p style="margin-bottom:8px;">
+                                <strong>IBM</strong>
+                                — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
+                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2003–2006</span><br>
+                                <span data-lang="en">Coordinated maintenance of IBM's international incentive and compensation systems.</span>
+                                <span data-lang="es">Mantenimiento de los sistemas internacionales de incentivos y compensación de IBM.</span>
+                            </p>
+                            <p>
+                                <strong>Decidir.com</strong>
+                                — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
+                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">1999–2002</span><br>
+                                <span data-lang="en">Banking and commercial risk systems — first professional Java experience.</span>
+                                <span data-lang="es">Sistemas de riesgo bancario y comercial — primera experiencia profesional con Java.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+    </div><!-- .page -->
 
     <script>
-	function toggleLanguage() {
-		const aboutTextEN = document.getElementById("about-text-en");
-		const aboutTextES = document.getElementById("about-text-es");
-		const educationEN = document.getElementById("education-en");
-		const educationES = document.getElementById("education-es");
-		const educationEN2 = document.getElementById("education-en-2");
-		const educationES2 = document.getElementById("education-es-2");
-		const educationEN3 = document.getElementById("education-en-3");
-		const educationES3 = document.getElementById("education-es-3");
-		const experienceTitlesEN = document.querySelectorAll("[id$='-en']");
-		const experienceTitlesES = document.querySelectorAll("[id$='-es']");
-		const expDescriptionsEN = document.querySelectorAll("[id^='exp-desc-en']");
-		const expDescriptionsES = document.querySelectorAll("[id^='exp-desc-es']");
-		const expTechEN = document.querySelectorAll("[id^='exp-tech-en']");
-		const expTechES = document.querySelectorAll("[id^='exp-tech-es']");
-		const languageButton = document.getElementById("language-button");
+        function toggleLang() {
+            const body = document.body;
+            const btn = document.getElementById('lang-btn');
+            if (body.classList.contains('lang-en')) {
+                body.classList.replace('lang-en', 'lang-es');
+                btn.textContent = 'EN';
+                document.documentElement.lang = 'es';
+            } else {
+                body.classList.replace('lang-es', 'lang-en');
+                btn.textContent = 'ES';
+                document.documentElement.lang = 'en';
+            }
+        }
 
-		if (aboutTextEN.style.display === "none") {
-			aboutTextEN.style.display = "block";
-			aboutTextES.style.display = "none";
-			educationEN.style.display = "block";
-			educationES.style.display = "none";
-			educationEN2.style.display = "block";
-			educationES2.style.display = "none";
-			educationEN3.style.display = "block";
-			educationES3.style.display = "none";
-			languageButton.innerText = "ES"; // Cambiar botón a "ES"
-
-			experienceTitlesEN.forEach(title => title.style.display = "block");
-			experienceTitlesES.forEach(title => title.style.display = "none");
-			expDescriptionsEN.forEach(desc => desc.style.display = "block");
-			expDescriptionsES.forEach(desc => desc.style.display = "none");
-			expTechEN.forEach(tech => tech.style.display = "block");
-			expTechES.forEach(tech => tech.style.display = "none");
-		} else {
-			aboutTextEN.style.display = "none";
-			aboutTextES.style.display = "block";
-			educationEN.style.display = "none";
-			educationES.style.display = "block";
-			educationEN2.style.display = "none";
-			educationES2.style.display = "block";
-			educationEN3.style.display = "none";
-			educationES3.style.display = "block";
-			languageButton.innerText = "EN"; // Cambiar botón a "EN"
-
-			experienceTitlesEN.forEach(title => title.style.display = "none");
-			experienceTitlesES.forEach(title => title.style.display = "block");
-			expDescriptionsEN.forEach(desc => desc.style.display = "none");
-			expDescriptionsES.forEach(desc => desc.style.display = "block");
-			expTechEN.forEach(tech => tech.style.display = "none");
-			expTechES.forEach(tech => tech.style.display = "block");
-		}
-	}
-
-	window.onload = function() {
-		const userLang = navigator.language || navigator.userLanguage;
-		if (userLang.startsWith('es')) {
-			toggleLanguage(); // Cambia al español si el idioma es español
-		}
-	};
+        // Auto-detect language on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const lang = navigator.language || navigator.userLanguage || 'en';
+            if (lang.toLowerCase().startsWith('es')) {
+                toggleLang();
+            }
+        });
     </script>
+
 </body>
 </html>
