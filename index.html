@@ -488,7 +488,36 @@
             line-height: 1.5;
         }
 
+        .exp-condensed details {
+            margin-bottom: 8px;
+        }
+        .exp-condensed summary {
+            cursor: pointer;
+            display: flex;
+            align-items: baseline;
+            gap: 7px;
+            list-style: none;
+        }
+        .exp-condensed summary::-webkit-details-marker { display: none; }
+        .exp-condensed summary::before {
+            content: '▸';
+            color: var(--accent);
+            font-size: .68rem;
+            flex-shrink: 0;
+            transition: transform .15s;
+        }
+        .exp-condensed details[open] summary::before { transform: rotate(90deg); }
+        .exp-earlier-desc {
+            margin-top: 4px;
+            padding-left: 15px;
+        }
+
         /* ── PRINT ── */
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
         @media print {
             * {
                 -webkit-print-color-adjust: exact !important;
@@ -497,7 +526,7 @@
             }
             body { background: white; font-size: 11px; }
             .page {
-                grid-template-columns: 220px 1fr;
+                display: block;
                 margin: 0;
                 border-radius: 0;
                 box-shadow: none;
@@ -507,10 +536,16 @@
             .cv-header { padding: 20px 28px 18px; }
             .cv-header-left h1 { font-size: 1.5rem; }
             .cv-photo { width: 64px; height: 64px; }
-            .sidebar { padding: 20px 16px; gap: 20px; }
-            .main { padding: 20px 24px; gap: 18px; }
+            .sidebar { padding: 14px 28px; gap: 14px; }
+            .skill-tags, .cert-item, .edu-item, .lang-item { break-inside: avoid; }
+            .main { padding: 16px 28px; gap: 14px; }
+            .section-title, .sidebar-section h2, .skill-category-label { letter-spacing: .2px !important; }
+            .experience-list { gap: 16px !important; }
             .exp-item { break-inside: avoid; }
             a { color: inherit; text-decoration: none; }
+            .exp-earlier-desc { display: none !important; }
+            .exp-condensed summary::before { display: none; }
+            .exp-condensed summary { cursor: default; gap: 0; }
         }
 
         /* ── RESPONSIVE ── */
@@ -593,10 +628,6 @@
                         <span class="skill-tag green">Custom Agents / Skills / Plugins</span>
                         <span class="skill-tag green">Spec-Driven Development</span>
                         <span class="skill-tag green">Multi-Agent Orchestration</span>
-                        <span class="skill-tag green">GitHub Copilot</span>
-                        <span class="skill-tag green">Windsurf IDE</span>
-                        <span class="skill-tag green">Devin</span>
-                        <span class="skill-tag green">Prompt Engineering</span>
                     </div>
                 </div>
 
@@ -658,16 +689,6 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <div class="skill-category-label">Practices</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Clean Code</span>
-                        <span class="skill-tag">Scrum / Agile</span>
-                        <span class="skill-tag">Code Review</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Maven / Gradle</span>
-                    </div>
-                </div>
             </div>
 
             <!-- Education -->
@@ -745,11 +766,7 @@
                 </div>
                 <div class="cert-item">
                     <div class="cert-dot"></div>
-                    <div>Java Sun J2EE Developer <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-dot"></div>
-                    <div>Creating Web Services with Java <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
+                    <div>Java Sun J2EE &amp; Web Services Developer <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
                 </div>
             </div>
 
@@ -847,16 +864,12 @@
                             <li data-lang="es">Diseño y mantengo integraciones con más de 10 proveedores de pago LATAM (Nequi, Colprocesa, PSE, pagos QR) en una plataforma de microservicios que procesa depósitos y cashouts en múltiples países</li>
                             <li data-lang="en">Diagnosed a critical race condition causing orphaned payments on Nequi QR (Colombia): HTTP provider call inside <code>@Transactional</code> triggered silent rollbacks on timeout; confirmed via Grafana/Loki log correlation and MySQL AUTO_INCREMENT gap analysis directly in production</li>
                             <li data-lang="es">Diagnostiqué una race condition crítica causando pagos huérfanos en Nequi QR (Colombia): HTTP call al proveedor dentro de <code>@Transactional</code> generaba rollbacks silenciosos; confirmado via correlación de logs Grafana/Loki y análisis de gaps AUTO_INCREMENT en producción</li>
-                            <li data-lang="en">Resolved a Zendesk ticket integration failure affecting merchants across Panama and Guatemala — implemented merchant email fallback logic and silent error UX fix; coordinated full-stack deploy across 7 white-label panels</li>
-                            <li data-lang="es">Resolví un fallo de integración Zendesk que afectaba a merchants en Panamá y Guatemala — implementé fallback de email del merchant y fix de error silencioso en UI; coordiné deploy fullstack en 7 paneles white-label</li>
                             <li data-lang="en">Adopted AI-augmented engineering with Claude Code multi-agent pipelines, parallelizing New Relic + Grafana/Loki + Redshift queries during incident investigations — reducing MTTR from hours to minutes</li>
                             <li data-lang="es">Adopté ingeniería asistida por IA con pipelines multi-agente de Claude Code, paralelizando consultas a New Relic + Grafana/Loki + Redshift durante investigaciones de incidentes — reduciendo el MTTR de horas a minutos</li>
                             <li data-lang="en">Built custom Claude Code agents and plugins for internal engineering workflows: a Docker deployment tool that spins up the full microservices fleet locally and lets an engineer pick just the service(s) to debug, and a shared-dev-database monitoring/diagnostics plugin</li>
                             <li data-lang="es">Construí agentes y plugins de Claude Code para flujos de trabajo internos: una herramienta de deploy en Docker que levanta toda la flota de microservicios en local y permite elegir qué servicio(s) debuguear, y un plugin de monitoreo/diagnóstico de la base de datos de desarrollo compartida</li>
                             <li data-lang="en">Maintain 15+ Java/Spring Boot microservices (<code>cash-gateway</code>, <code>cashout-gateway</code>, <code>cashin-internal</code>, <code>merchant-panel</code>) deployed on Kubernetes with Kustomize overlays per environment</li>
                             <li data-lang="es">Mantengo más de 15 microservicios Java/Spring Boot (<code>cash-gateway</code>, <code>cashout-gateway</code>, <code>cashin-internal</code>, <code>merchant-panel</code>) desplegados en Kubernetes con overlays Kustomize por ambiente</li>
-                            <li data-lang="en">Lead code reviews enforcing team clean code conventions: guard clauses, <code>@RequiredArgsConstructor</code>, Java Records for DTOs, Rule of 30, no magic values</li>
-                            <li data-lang="es">Lidero code reviews aplicando convenciones de clean code del equipo: guard clauses, <code>@RequiredArgsConstructor</code>, Java Records para DTOs, Regla de 30, sin magic values</li>
                         </ul>
                         <div class="tech-pills">
                             <span class="tech-pill">Java 17</span>
@@ -888,8 +901,6 @@
                             <li data-lang="es">Desarrollé de punta a punta la integración de BIND (Banco Industrial) como nuevo PSP para operaciones CVU y transferencias entre cuentas en Argentina — desde el diseño de la API del proveedor hasta el rollout en producción</li>
                             <li data-lang="en">Designed the new CVU flow to coexist with the legacy Banco Coinag integration during the transition period, then led the full migration until BIND became the sole provider</li>
                             <li data-lang="es">Diseñé el nuevo flujo CVU para coexistir con la integración legacy de Banco Coinag durante la transición, luego lideré la migración completa hasta que BIND reemplazó al proveedor anterior</li>
-                            <li data-lang="en">Also contributed to cashin and cashout flows within the platform alongside the CVU initiative</li>
-                            <li data-lang="es">Contribuí además a flujos de cashin y cashout dentro de la plataforma en paralelo a la iniciativa de CVU</li>
                         </ul>
                         <div class="tech-pills">
                             <span class="tech-pill">Java</span>
@@ -1016,48 +1027,72 @@
                         </div>
 
                         <div class="exp-condensed">
-                            <p style="margin-bottom:8px;">
-                                <strong>ProKarma</strong> <span style="color:var(--text-muted)">for Hughes Telematics, Inc</span>
-                                — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
-                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2011–2013</span><br>
-                                <span data-lang="en">Led backend development for a telematics platform. Introduced Scrum practices to the team.</span>
-                                <span data-lang="es">Lideré el backend de una plataforma de telemática. Introduje prácticas Scrum al equipo.</span>
-                            </p>
-                            <p style="margin-bottom:8px;">
-                                <strong>BairesDev</strong> <span style="color:var(--text-muted)">for PLAYPHONE</span>
-                                — <span data-lang="en">Java Developer</span><span data-lang="es">Desarrollador Java</span>
-                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2011</span><br>
-                                <span data-lang="en">Backend development for a social gaming platform.</span>
-                                <span data-lang="es">Backend de una plataforma de juegos sociales.</span>
-                            </p>
-                            <p style="margin-bottom:8px;">
-                                <strong>Verizon Business</strong>
-                                — <span data-lang="en">Java Engineer</span><span data-lang="es">Ingeniero Java</span>
-                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2006–2009</span><br>
-                                <span data-lang="en">SmartGWT migrations and phone number management applications.</span>
-                                <span data-lang="es">Migraciones SmartGWT y aplicaciones de gestión de numeración telefónica.</span>
-                            </p>
-                            <p style="margin-bottom:8px;">
-                                <strong>Siemens Itron Business Services</strong>
-                                — <span data-lang="en">Java Engineer</span><span data-lang="es">Ingeniero Java</span>
-                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2005–2006</span><br>
-                                <span data-lang="en">Intranet/Extranet for Global Collection Services.</span>
-                                <span data-lang="es">Intranet/Extranet para Servicios Globales de Cobranza.</span>
-                            </p>
-                            <p style="margin-bottom:8px;">
-                                <strong>IBM</strong>
-                                — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
-                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2003–2006</span><br>
-                                <span data-lang="en">Coordinated maintenance of IBM's international incentive and compensation systems.</span>
-                                <span data-lang="es">Mantenimiento de los sistemas internacionales de incentivos y compensación de IBM.</span>
-                            </p>
-                            <p>
-                                <strong>Decidir.com</strong>
-                                — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
-                                <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">1999–2002</span><br>
-                                <span data-lang="en">Banking and commercial risk systems — first professional Java experience.</span>
-                                <span data-lang="es">Sistemas de riesgo bancario y comercial — primera experiencia profesional con Java.</span>
-                            </p>
+                            <details>
+                                <summary>
+                                    <span><strong>ProKarma</strong> <span style="color:var(--text-muted)">for Hughes Telematics, Inc</span>
+                                    — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2011–2013</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">Led backend development for a telematics platform. Introduced Scrum practices to the team.</span>
+                                    <span data-lang="es">Lideré el backend de una plataforma de telemática. Introduje prácticas Scrum al equipo.</span>
+                                </p>
+                            </details>
+                            <details>
+                                <summary>
+                                    <span><strong>BairesDev</strong> <span style="color:var(--text-muted)">for PLAYPHONE</span>
+                                    — <span data-lang="en">Java Developer</span><span data-lang="es">Desarrollador Java</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2011</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">Backend development for a social gaming platform.</span>
+                                    <span data-lang="es">Backend de una plataforma de juegos sociales.</span>
+                                </p>
+                            </details>
+                            <details>
+                                <summary>
+                                    <span><strong>Verizon Business</strong>
+                                    — <span data-lang="en">Java Engineer</span><span data-lang="es">Ingeniero Java</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2006–2009</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">SmartGWT migrations and phone number management applications.</span>
+                                    <span data-lang="es">Migraciones SmartGWT y aplicaciones de gestión de numeración telefónica.</span>
+                                </p>
+                            </details>
+                            <details>
+                                <summary>
+                                    <span><strong>Siemens Itron Business Services</strong>
+                                    — <span data-lang="en">Java Engineer</span><span data-lang="es">Ingeniero Java</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2005–2006</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">Intranet/Extranet for Global Collection Services.</span>
+                                    <span data-lang="es">Intranet/Extranet para Servicios Globales de Cobranza.</span>
+                                </p>
+                            </details>
+                            <details>
+                                <summary>
+                                    <span><strong>IBM</strong>
+                                    — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2003–2006</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">Coordinated maintenance of IBM's international incentive and compensation systems.</span>
+                                    <span data-lang="es">Mantenimiento de los sistemas internacionales de incentivos y compensación de IBM.</span>
+                                </p>
+                            </details>
+                            <details>
+                                <summary>
+                                    <span><strong>Decidir.com</strong>
+                                    — <span data-lang="en">Team Leader &amp; Java Developer</span><span data-lang="es">Líder y Desarrollador Java</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">1999–2002</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">Banking and commercial risk systems — first professional Java experience.</span>
+                                    <span data-lang="es">Sistemas de riesgo bancario y comercial — primera experiencia profesional con Java.</span>
+                                </p>
+                            </details>
                         </div>
                     </div>
 
