@@ -7,7 +7,7 @@
   address: "Buenos Aires, Argentina",
   lastupdated: "true",
   pagecount: "true",
-  date: "2026-07-20",
+  date: "2026-08-24",
   contacts: (
     (text: "linkedin.com/in/jonathanmuseri", link: "https://www.linkedin.com/in/jonathanmuseri/"),
     (text: "jmuseri@gmail.com", link: "mailto:jmuseri@gmail.com"),
@@ -15,7 +15,7 @@
 )
 
 #section[Sobre Mí]
-#descript[Ingeniero backend senior con 20+ años en Java y Spring — telecomunicaciones, sistemas de incentivos/compensaciones y gaming, y, desde 2022, plataformas bancarias y de pagos de alta disponibilidad en Latinoamérica. Actualmente diseño y opero un SaaS en producción de punta a punta como único ingeniero, sumado a un historial como ingeniero senior liderando equipos backend y entregando integraciones fintech a gran escala.]
+#descript[Ingeniero backend orientado a resultados, con 7+ años en Java y Spring, mayormente en fintech y pagos, además de experiencia previa liderando equipos de ingeniería. Actualmente diseño y opero un SaaS en producción de punta a punta como único ingeniero.]
 
 #sectionsep
 #section("Experiencia")
@@ -24,7 +24,7 @@
   position: "Fundador e Ingeniero — SaaS de Facturación para Monotributistas Argentinos",
   institution: [TuFactura],
   location: "Remoto",
-  date: "2026 – Presente",
+  date: "May 2026 – Presente",
   description: [
     - Diseñé, construí y lancé un SaaS en producción de punta a punta como único ingeniero — facturación, facturación recurrente, integración fiscal, notificaciones y portales de contadores/afiliados — con cumplimiento de privacidad de datos (exportación, eliminación, auditoría, cifrado)
     - Opero el código con un flujo spec-driven: cada feature se entrega con tests, respaldado por 10+ herramientas internas para revisión de código, auditoría de DB, cumplimiento normativo y diagnóstico de facturación
@@ -35,11 +35,11 @@
   position: "Ingeniero Backend Senior Java — Plataforma de Pagos",
   institution: [ERON International],
   location: "Remoto",
-  date: "Abr 2025 – Presente",
+  date: "Abr 2025 – Jun 2026",
   description: [
     - Desarrollo y mantengo integraciones con 10+ proveedores de pago de LATAM en una plataforma de microservicios que procesa depósitos y retiros en múltiples países
     - Diagnostiqué y resolví una condición de carrera crítica que causaba pagos huérfanos en un proveedor de QR (Colombia), identificada vía correlación de logs y análisis de datos en producción
-    - Introduje flujos de investigación de incidentes multi-agente con IA, paralelizando consultas de logs y métricas en 15+ microservicios Java/Spring Boot sobre Kubernetes — reduciendo el MTTR de horas a minutos
+    - Introduje flujos de investigación de incidentes multi-agente con IA, paralelizando consultas de logs y métricas en 15+ microservicios Java/Spring Boot sobre Kubernetes — reduciendo de forma significativa el tiempo de investigación y resolución de incidentes
   ],
 )
 
@@ -69,8 +69,8 @@
 )
 
 #oneline-title-item(
-  title: "Experiencia Anterior (2003 – 2013)",
-  content: [Backend Java/Spring y liderazgo técnico en telecomunicaciones (Verizon Business), IBM (incentivos y compensaciones), telemática (ProKarma, para Hughes Telematics), gaming (BairesDev, para PlayPhone), y banca/riesgo (Decidir.com, Siemens Itron).],
+  title: "Experiencia Anterior (2003 – 2018)",
+  content: [Backend Java/Spring y liderazgo técnico en telecomunicaciones (Verizon Business), IBM (incentivos y compensaciones), telemática (ProKarma, para Hughes Telematics), gaming (BairesDev, para PlayPhone), y banca/riesgo (Decidir.com, Siemens Itron) hasta 2013; luego Director de Operaciones en Textil DaiVak, pyme familiar, hasta 2018.],
 )
 
 #sectionsep
