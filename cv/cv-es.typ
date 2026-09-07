@@ -7,7 +7,7 @@
   address: "Buenos Aires, Argentina",
   lastupdated: "true",
   pagecount: "true",
-  date: "2026-08-24",
+  date: "2026-09-07",
   contacts: (
     (text: "linkedin.com/in/jonathanmuseri", link: "https://www.linkedin.com/in/jonathanmuseri/"),
     (text: "jmuseri@gmail.com", link: "mailto:jmuseri@gmail.com"),
@@ -15,7 +15,7 @@
 )
 
 #section[Sobre Mí]
-#descript[Ingeniero backend orientado a resultados, con 7+ años en Java y Spring, mayormente en fintech y pagos, además de experiencia previa liderando equipos de ingeniería. Actualmente diseño y opero un SaaS en producción de punta a punta como único ingeniero.]
+#descript[Ingeniero de Software Senior con más de 20 años en Java y Spring — trayectoria que combina profundidad técnica hands-on y liderazgo real de equipos. Como ingeniero: sistemas de alta disponibilidad en ERON (15+ microservicios, 10+ proveedores de pago LATAM) y, actualmente, diseño y opero TuFactura de punta a punta, un SaaS de facturación en producción para monotributistas argentinos. Como líder: equipos de desarrollo en G&L Group (para Banco Credicoop), Baufest (para BBVA) y Navent, y, junto a los dueños de la empresa, operaciones de una PyME textil familiar durante cinco años.]
 
 #sectionsep
 #section("Experiencia")
@@ -26,7 +26,7 @@
   location: "Remoto",
   date: "May 2026 – Presente",
   description: [
-    - Diseñé, construí y lancé un SaaS en producción de punta a punta como único ingeniero — facturación, facturación recurrente, integración fiscal, notificaciones y portales de contadores/afiliados — con cumplimiento de privacidad de datos (exportación, eliminación, auditoría, cifrado)
+    - Diseñé, construí y lancé un SaaS en producción de punta a punta como único ingeniero — facturación, facturación recurrente, integración fiscal (ARCA), notificaciones y portales de contadores/afiliados — con cumplimiento de privacidad de datos (exportación, eliminación, auditoría, cifrado)
     - Opero el código con un flujo spec-driven: cada feature se entrega con tests, respaldado por 10+ herramientas internas para revisión de código, auditoría de DB, cumplimiento normativo y diagnóstico de facturación
   ],
 )
@@ -37,9 +37,9 @@
   location: "Remoto",
   date: "Abr 2025 – Jun 2026",
   description: [
-    - Desarrollo y mantengo integraciones con 10+ proveedores de pago de LATAM en una plataforma de microservicios que procesa depósitos y retiros en múltiples países
-    - Diagnostiqué y resolví una condición de carrera crítica que causaba pagos huérfanos en un proveedor de QR (Colombia), identificada vía correlación de logs y análisis de datos en producción
-    - Introduje flujos de investigación de incidentes multi-agente con IA, paralelizando consultas de logs y métricas en 15+ microservicios Java/Spring Boot sobre Kubernetes — reduciendo de forma significativa el tiempo de investigación y resolución de incidentes
+    - Desarrollador backend en distintos equipos de la plataforma de pagos de ERON — LATAM Payments (dos veces), Platform y TuPay Perú — trabajando en procesamiento de tarjetas (BIN checks, autorización y captura, tarjetas Multiplo), suscripciones basadas en tokens, e integraciones con proveedores de pago de LATAM (CIELO Brasil, WepayU México, Bind Argentina, entre otros)
+    - Cómodo operando en sistemas complejos o poco documentados: reconstruyendo flujos a partir de logs y tests, y coordinando con otros equipos para entregar fixes e integraciones nuevas
+    - Mantuve 15+ microservicios Java/Spring Boot sobre Kubernetes, procesando depósitos y retiros en múltiples países de LATAM
   ],
 )
 
@@ -49,7 +49,8 @@
   location: "Buenos Aires, Argentina",
   date: "Feb 2024 – Mar 2025",
   description: [
-    - Responsable end-to-end de la integración de un nuevo banco como PSP para CVU y transferencias entre cuentas en Argentina, desde el diseño de la API hasta producción, liderando luego la migración fuera del proveedor anterior
+    - Responsable end-to-end de la integración de un nuevo banco como PSP para CVU y transferencias entre cuentas en Argentina, desde el diseño de la API hasta producción
+    - Diseñé el nuevo flujo para coexistir con la integración legacy durante la transición, y luego lideré la migración completa hasta reemplazar al proveedor anterior
   ],
 )
 
@@ -63,21 +64,68 @@
   ],
 )
 
-#oneline-title-item(
-  title: "2019 – 2022",
-  content: [Java Developer / Team Leader en DataArt (plugins de cumplimiento para reportes regulatorios), Navent (lideré la modernización backend de ZonaProp/Inmuebles24 a microservicios Spring Boot), Banco Credicoop (lideré el equipo de un sistema de validación con Kafka, resolviendo cuellos de botella de performance) y Baufest para BBVA (lideré la transformación digital de procesos bancarios a microservicios REST).],
+#job(
+  position: "Desarrollador Java",
+  institution: [DataArt Inc],
+  location: "Buenos Aires, Argentina",
+  date: "Ene 2022 – Ago 2022",
+  description: [
+    - Desarrollé plugins de cumplimiento normativo integrados en un sistema de reporte regulatorio
+  ],
+)
+
+#job(
+  position: "Desarrollador Java Senior",
+  institution: [Navent],
+  location: "Buenos Aires, Argentina",
+  date: "Jun 2021 – Ene 2022",
+  description: [
+    - Lideré la modernización del backend inmobiliario (ZonaProp / Inmuebles24), migrando servicios legacy a microservicios Spring Boot
+  ],
+)
+
+#job(
+  position: "Líder de Equipo y Desarrollador Java",
+  institution: [G&L Group, para Banco Credicoop],
+  location: "Buenos Aires, Argentina",
+  date: "Ene 2020 – Jun 2021",
+  description: [
+    - Promovido a Líder de Equipo del sistema de validación GUV, liderando un equipo de 6 desarrolladores, resolviendo cuellos de botella de rendimiento críticos y entregando nuevos requisitos regulatorios en tiempo
+  ],
+)
+
+#job(
+  position: "Líder de Equipo y Desarrollador Java",
+  institution: [Baufest, para BBVA],
+  location: "Buenos Aires, Argentina",
+  date: "Ene 2019 – Dic 2019",
+  description: [
+    - Lideré el proyecto de transformación digital de BBVA, migrando procesos bancarios analógicos a microservicios REST
+  ],
+)
+
+#job(
+  position: "Gerente de Operaciones",
+  institution: [Textil DaiVak SRL],
+  location: "Buenos Aires, Argentina",
+  date: "Ene 2014 – May 2019",
+  description: [
+    - Gestioné la operación diaria de una PyME textil familiar junto a los dueños — decisiones de compra, depósito, preparación y entrega de pedidos, y apertura y cierre
+    - Vendí directamente a grandes clientes y armé un equipo de ventas para ampliar el alcance comercial; gestioné cobranzas y negociación con proveedores
+    - Lideré cambios operativos y de sistemas para mejorar la eficiencia, administrando la empresa durante una etapa de crecimiento y luego de contracción, y traje nuevas oportunidades de negocio
+  ],
 )
 
 #oneline-title-item(
-  title: "Experiencia Anterior (2003 – 2018)",
-  content: [Backend Java/Spring y liderazgo técnico en telecomunicaciones (Verizon Business), IBM (incentivos y compensaciones), telemática (ProKarma, para Hughes Telematics), gaming (BairesDev, para PlayPhone), y banca/riesgo (Decidir.com, Siemens Itron) hasta 2013; luego Director de Operaciones en Textil DaiVak, pyme familiar, hasta 2018.],
+  title: "Experiencia Anterior (2003 – 2013)",
+  content: [Líder de Equipo y Desarrollador Java en ProKarma para Hughes Telematics (backend de telemática, introduje prácticas Scrum), BairesDev para PlayPhone (gaming), Verizon Business (aplicaciones de gestión de numeración telefónica), Siemens Itron (intranet/extranet de cobranzas), y Líder de Equipo y Desarrollador Java en IBM (sistemas internacionales de incentivos y compensación) y en Decidir.com (sistemas de riesgo bancario y comercial, primera experiencia profesional con Java). En paralelo, mantuve JM Sistemas (2007 – 2013), mi práctica freelance independiente construyendo sistemas a medida para pequeñas y medianas empresas.],
 )
 
 #sectionsep
 #section("Habilidades")
 #oneline-title-item(
   title: "Habilidades",
-  content: [Java 17/21, Spring Boot, Spring Data JPA, Hibernate, Kafka, Microservicios, APIs REST · AWS, Kubernetes, Docker, MySQL, Redshift · New Relic, Grafana/Loki · Desarrollo asistido por IA (Claude Code)],
+  content: [Java 17/21, Spring Boot, Spring Data JPA, Hibernate, Kafka, Microservicios, diseño de APIs REST y API gateways · Spring Security, JWT, OAuth2 · Flyway (migraciones de DB), MySQL, Redshift · Integraciones con pasarelas de pago (Mercado Pago) · AWS, Kubernetes, Docker, GitHub Actions CI/CD · New Relic, Grafana/Loki · Java/J2EE legacy (JSP, Servlets) — experiencia manteniendo y migrando código legacy · Desarrollo asistido por IA (Claude Code) · Liderazgo técnico de equipos, gestión de operaciones y negociación con proveedores],
 )
 
 #sectionsep

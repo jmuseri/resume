@@ -7,7 +7,7 @@
   address: "Buenos Aires, Argentina",
   lastupdated: "true",
   pagecount: "true",
-  date: "2026-08-24",
+  date: "2026-09-07",
   contacts: (
     (text: "linkedin.com/in/jonathanmuseri", link: "https://www.linkedin.com/in/jonathanmuseri/"),
     (text: "jmuseri@gmail.com", link: "mailto:jmuseri@gmail.com"),
@@ -15,7 +15,7 @@
 )
 
 #section[About Me]
-#descript[Result-oriented backend engineer with 7+ years in Java and Spring, mostly fintech and payments, plus prior experience leading engineering teams. Currently building and running a production SaaS end-to-end as its sole engineer.]
+#descript[Senior Software Engineer with 20+ years in Java and Spring — a career that combines hands-on engineering depth and real team leadership. As an engineer: high-availability systems at ERON (15+ microservices, 10+ LATAM payment providers), and, currently, designing and running TuFactura end-to-end, a production invoicing SaaS for Argentine taxpayers. As a leader: development teams at G&L Group (for Banco Credicoop), Baufest (for BBVA), and Navent, and, alongside family ownership, operations for a family-owned textile company for five years.]
 
 #sectionsep
 #section("Experience")
@@ -26,7 +26,7 @@
   location: "Remote",
   date: "May 2026 – Present",
   description: [
-    - Designed, built, and shipped a production SaaS end-to-end as the sole engineer — invoicing, recurring billing, tax-authority integration, notifications, accountant/affiliate portals — including full data-privacy compliance (export, deletion, audit logging, encryption)
+    - Designed, built, and shipped a production SaaS end-to-end as the sole engineer — invoicing, recurring billing, tax-authority integration (ARCA), notifications, accountant/affiliate portals — including full data-privacy compliance (export, deletion, audit logging, encryption)
     - Run the codebase on a spec-driven workflow: every feature ships with tests, backed by 10+ purpose-built internal tools for code review, DB auditing, compliance checks, and billing diagnostics
   ],
 )
@@ -37,9 +37,9 @@
   location: "Remote",
   date: "Apr 2025 – Jun 2026",
   description: [
-    - Engineer and maintain integrations with 10+ LATAM payment providers within a microservices platform processing deposits and cashouts across multiple countries
-    - Diagnosed and fixed a critical race condition causing orphaned payments on a QR provider (Colombia), root-caused via log correlation and database analysis directly in production
-    - Introduced AI-assisted, multi-agent incident investigation workflows, parallelizing log and metrics queries across 15+ Java/Spring Boot microservices on Kubernetes — significantly cutting incident investigation and resolution time
+    - Backend engineer across multiple teams within ERON's payments platform — LATAM Payments (twice), Platform, and TuPay Peru — working on card processing (BIN checks, authorization & capture, Multiplo cards), token-based subscriptions, and integrations with LATAM payment providers (CIELO Brazil, WepayU Mexico, Bind Argentina, among others)
+    - Comfortable operating in complex or undocumented systems: reconstructing flows from logs and tests, and coordinating across teams to ship fixes and new integrations
+    - Maintained 15+ Java/Spring Boot microservices on Kubernetes, processing deposits and cashouts across multiple LATAM countries
   ],
 )
 
@@ -49,7 +49,8 @@
   location: "Buenos Aires, Argentina",
   date: "Feb 2024 – Mar 2025",
   description: [
-    - Owned end-to-end integration of a new bank as PSP for CVU operations and inter-account transfers in Argentina, from provider API design to production rollout, then led the full migration off the legacy provider
+    - Owned end-to-end integration of a new bank as PSP for CVU operations and inter-account transfers in Argentina, from provider API design to production rollout
+    - Designed the new flow to coexist with the legacy integration during the transition, then led the full migration until the new provider became the sole one
   ],
 )
 
@@ -63,32 +64,79 @@
   ],
 )
 
-#oneline-title-item(
-  title: "2019 – 2022",
-  content: [Java Developer / Team Leader roles at DataArt (compliance plugins for a regulatory reporting system), Navent (led backend modernization of ZonaProp/Inmuebles24, migrating legacy services to Spring Boot microservices), Banco Credicoop (led team behind a Kafka-based validation system, resolving critical performance bottlenecks), and Baufest for BBVA (led a digital transformation project, analog banking processes to REST microservices).],
+#job(
+  position: "Java Developer",
+  institution: [DataArt Inc],
+  location: "Buenos Aires, Argentina",
+  date: "Jan 2022 – Aug 2022",
+  description: [
+    - Developed compliance solution plugins integrated into a regulatory reporting system
+  ],
+)
+
+#job(
+  position: "Senior Java Developer",
+  institution: [Navent],
+  location: "Buenos Aires, Argentina",
+  date: "Jun 2021 – Jan 2022",
+  description: [
+    - Led modernization of the real estate backend system (ZonaProp / Inmuebles24), migrating legacy services to Spring Boot microservices
+  ],
+)
+
+#job(
+  position: "Team Leader & Java Developer",
+  institution: [G&L Group, for Banco Credicoop],
+  location: "Buenos Aires, Argentina",
+  date: "Jan 2020 – Jun 2021",
+  description: [
+    - Promoted to Team Lead of the GUV validation system, leading a team of 6 engineers, resolving critical performance bottlenecks and delivering new regulatory requirements on schedule
+  ],
+)
+
+#job(
+  position: "Team Leader & Java Developer",
+  institution: [Baufest, for BBVA],
+  location: "Buenos Aires, Argentina",
+  date: "Jan 2019 – Dec 2019",
+  description: [
+    - Led a BBVA digital transformation project, migrating analog banking processes to REST microservices
+  ],
+)
+
+#job(
+  position: "Operations Manager",
+  institution: [Textil DaiVak SRL],
+  location: "Buenos Aires, Argentina",
+  date: "Jan 2014 – May 2019",
+  description: [
+    - Managed day-to-day operations of a family-owned textile company alongside ownership — purchasing decisions, warehouse, order fulfillment, and daily opening/closing
+    - Sold directly to key accounts and built out a sales team to grow reach; handled collections and vendor negotiation
+    - Led operational and systems changes to improve efficiency, managing the business through a growth phase and later a contraction, and sourced new business opportunities
+  ],
 )
 
 #oneline-title-item(
-  title: "Earlier Experience (2003 – 2018)",
-  content: [Java/Spring backend and technical leadership roles across telecom (Verizon Business), IBM (compensation systems), telematics (ProKarma/Hughes Telematics), gaming (BairesDev/PlayPhone), and banking/risk (Decidir.com, Siemens Itron) through 2013; then Business Operations Lead at Textil DaiVak, a family SME, through 2018.],
+  title: "Earlier Experience (2003 – 2013)",
+  content: [Team Leader & Java Developer at ProKarma for Hughes Telematics (telematics backend, introduced Scrum practices), BairesDev for PlayPhone (gaming), Verizon Business (phone number management applications), Siemens Itron (intranet/extranet for collections), and Team Leader & Java Developer at IBM (international incentive/compensation systems) and Decidir.com (banking and commercial risk systems, first professional Java experience). Alongside this, ran JM Sistemas (2007 – 2013), an independent freelance practice building custom systems for small and medium businesses.],
 )
 
 #sectionsep
 #section("Skills")
 #oneline-title-item(
   title: "Skills",
-  content: [Java 17/21, Spring Boot, Spring Data JPA, Hibernate, Kafka, Microservices, REST APIs · AWS, Kubernetes, Docker, MySQL, Redshift · New Relic, Grafana/Loki · AI-assisted development (Claude Code)],
+  content: [Java 17/21, Spring Boot, Spring Data JPA, Hibernate, Kafka, Microservices, REST API design & API gateways · Spring Security, JWT, OAuth2 · Flyway (DB migrations), MySQL, Redshift · Payment gateway integrations (Mercado Pago) · AWS, Kubernetes, Docker, GitHub Actions CI/CD · New Relic, Grafana/Loki · Legacy Java/J2EE (JSP, Servlets) — comfortable maintaining and migrating older codebases · AI-assisted development (Claude Code) · Technical team leadership, operations management, and vendor negotiation],
 )
 
 #sectionsep
 #section("Education, Certifications & Languages")
 #oneline-title-item(
   title: "Education",
-  content: [Systems Licentiate Degree, CAECE University (2007) · System Analyst, ORT Technological Institute (2001) · DevOps Diploma, UNC (2024) · Certified ScrumMaster (2010)],
+  content: [Systems Licentiate Degree, CAECE University (2007) · System Analyst, ORT Technological Institute (2001)],
 )
 #oneline-title-item(
-  title: "Languages",
-  content: [Spanish (Native), English (C1, EF SET Advanced 2022)],
+  title: "Certifications & Languages",
+  content: [DevOps Diploma, UNC (2024) · Certified ScrumMaster (2010) · EF SET English C1 Advanced (2022) · Spanish (Native), English (C1)],
 )
 
 #set document(author: "Jonathan Museri", title: "Jonathan Museri - Resume")

@@ -782,10 +782,10 @@
                     <span data-lang="es">Resumen Profesional</span>
                 </div>
                 <p class="summary-text" data-lang="en">
-                    Senior Software Engineer with <strong>20+ years</strong> in Java and Spring, with a career that combines hands-on engineering depth and real team leadership — not one or the other. As an engineer: high-availability systems at ERON (15+ microservices, 10+ LATAM payment providers, multi-country deposits/cashouts), and independently designed, built, and now runs <strong>TuFactura</strong>, a production invoicing SaaS for Argentine monotributistas, end-to-end — real tax-authority integration, payments, and compliance included. As a leader: led development teams at banks and international companies — Banco Credicoop (Kafka-based validation system), Baufest on a BBVA digital transformation project, Navent (backend modernization) — and ran the full operation of a family-owned textile company for five years (budget, vendors, sales team). Builds and ships using an agent-assisted, spec-driven workflow with Claude Code, which has meaningfully cut both delivery time and incident MTTR without adding process overhead.
+                    Senior Software Engineer with <strong>20+ years</strong> in Java and Spring, with a career that combines hands-on engineering depth and real team leadership — not one or the other. As an engineer: high-availability systems at ERON (15+ microservices, 10+ LATAM payment providers, multi-country deposits/cashouts), and independently designed, built, and now runs <strong>TuFactura</strong>, a production invoicing SaaS for Argentine monotributistas, end-to-end — real tax-authority integration, payments, and compliance included. As a leader: led development teams at banks and international companies — G&amp;L Group for Banco Credicoop (Kafka-based validation system), Baufest on a BBVA digital transformation project, Navent (backend modernization) — and, alongside family ownership, managed operations for a family-owned textile company for five years (purchasing, key-account sales, collections, warehouse/logistics). Builds and ships using an agent-assisted, spec-driven workflow with Claude Code.
                 </p>
                 <p class="summary-text" data-lang="es">
-                    Ingeniero de Software Senior con <strong>más de 20 años</strong> en Java y Spring, con una trayectoria que combina profundidad técnica hands-on y liderazgo real de equipos — no una cosa u otra. Como ingeniero: sistemas de alta disponibilidad en ERON (15+ microservicios, 10+ proveedores de pago LATAM, depósitos y cashouts multi-país), y diseñó, construyó y hoy opera de forma independiente <strong>TuFactura</strong>, un SaaS de facturación en producción para monotributistas argentinos, de punta a punta — con integración real al organismo fiscal, pagos y cumplimiento normativo incluidos. Como líder: lideró equipos de desarrollo en bancos y empresas internacionales — Banco Credicoop (sistema de validación con Kafka), Baufest en un proyecto de transformación digital de BBVA, Navent (modernización backend) — y dirigió la operación completa de una PyME textil familiar durante cinco años (presupuesto, proveedores, equipo comercial). Construye y entrega con un flujo de trabajo spec-driven asistido por agentes con Claude Code, que redujo de forma concreta tanto el tiempo de entrega como el MTTR de incidentes, sin sumar overhead de proceso.
+                    Ingeniero de Software Senior con <strong>más de 20 años</strong> en Java y Spring, con una trayectoria que combina profundidad técnica hands-on y liderazgo real de equipos — no una cosa u otra. Como ingeniero: sistemas de alta disponibilidad en ERON (15+ microservicios, 10+ proveedores de pago LATAM, depósitos y cashouts multi-país), y diseñó, construyó y hoy opera de forma independiente <strong>TuFactura</strong>, un SaaS de facturación en producción para monotributistas argentinos, de punta a punta — con integración real al organismo fiscal, pagos y cumplimiento normativo incluidos. Como líder: lideró equipos de desarrollo en bancos y empresas internacionales — G&amp;L Group para Banco Credicoop (sistema de validación con Kafka), Baufest en un proyecto de transformación digital de BBVA, Navent (modernización backend) — y, junto a los dueños de la empresa, gestionó las operaciones de una PyME textil familiar durante cinco años (compras, ventas a grandes clientes, cobranzas, depósito y logística). Construye y entrega con un flujo de trabajo spec-driven asistido por agentes con Claude Code.
                 </p>
             </section>
 
@@ -825,6 +825,10 @@
                         <span class="tech-pill">Spring Boot</span>
                         <span class="tech-pill">React + TypeScript</span>
                         <span class="tech-pill">MySQL / Flyway</span>
+                        <span class="tech-pill">Spring Security / JWT</span>
+                        <span class="tech-pill">OAuth2</span>
+                        <span class="tech-pill">Mercado Pago</span>
+                        <span class="tech-pill">GitHub Actions CI/CD</span>
                         <span class="tech-pill">Claude Code</span>
                         <span class="tech-pill">Spec-Driven Dev</span>
                         <span class="tech-pill">AFIP/ARCA</span>
@@ -856,16 +860,14 @@
                             <span data-lang="es">Ingeniero Backend Java Senior — Plataforma de Pagos ERON</span>
                         </div>
                         <ul class="exp-bullets">
-                            <li data-lang="en">Engineer and maintain integrations with 10+ LATAM payment providers (Nequi, Colprocesa, PSE, QR payments) within a microservices platform processing deposits and cashouts across multiple countries</li>
-                            <li data-lang="es">Diseño y mantengo integraciones con más de 10 proveedores de pago LATAM (Nequi, Colprocesa, PSE, pagos QR) en una plataforma de microservicios que procesa depósitos y cashouts en múltiples países</li>
-                            <li data-lang="en">Diagnosed a critical race condition causing orphaned payments on Nequi QR (Colombia): HTTP provider call inside <code>@Transactional</code> triggered silent rollbacks on timeout; confirmed via Grafana/Loki log correlation and MySQL AUTO_INCREMENT gap analysis directly in production</li>
-                            <li data-lang="es">Diagnostiqué una race condition crítica causando pagos huérfanos en Nequi QR (Colombia): HTTP call al proveedor dentro de <code>@Transactional</code> generaba rollbacks silenciosos; confirmado via correlación de logs Grafana/Loki y análisis de gaps AUTO_INCREMENT en producción</li>
-                            <li data-lang="en">Adopted AI-augmented engineering with Claude Code multi-agent pipelines, parallelizing New Relic + Grafana/Loki + Redshift queries during incident investigations — significantly cutting MTTR</li>
-                            <li data-lang="es">Adopté ingeniería asistida por IA con pipelines multi-agente de Claude Code, paralelizando consultas a New Relic + Grafana/Loki + Redshift durante investigaciones de incidentes — reduciendo el MTTR de forma significativa</li>
-                            <li data-lang="en">Built custom Claude Code agents and plugins for internal engineering workflows: a Docker deployment tool that spins up the full microservices fleet locally and lets an engineer pick just the service(s) to debug, and a shared-dev-database monitoring/diagnostics plugin</li>
-                            <li data-lang="es">Construí agentes y plugins de Claude Code para flujos de trabajo internos: una herramienta de deploy en Docker que levanta toda la flota de microservicios en local y permite elegir qué servicio(s) debuguear, y un plugin de monitoreo/diagnóstico de la base de datos de desarrollo compartida</li>
-                            <li data-lang="en">Maintain 15+ Java/Spring Boot microservices (<code>cash-gateway</code>, <code>cashout-gateway</code>, <code>cashin-internal</code>, <code>merchant-panel</code>) deployed on Kubernetes with Kustomize overlays per environment</li>
-                            <li data-lang="es">Mantengo más de 15 microservicios Java/Spring Boot (<code>cash-gateway</code>, <code>cashout-gateway</code>, <code>cashin-internal</code>, <code>merchant-panel</code>) desplegados en Kubernetes con overlays Kustomize por ambiente</li>
+                            <li data-lang="en">Backend engineer across multiple teams within ERON's payments platform — LATAM Payments (twice), Platform, and TuPay Peru — working on card processing (BIN checks, authorization &amp; capture, Multiplo cards), token-based subscriptions, and integrations with LATAM payment providers (CIELO Brazil, WepayU Mexico, Bind Argentina, among others)</li>
+                            <li data-lang="es">Desarrollador backend en distintos equipos de la plataforma de pagos de ERON — LATAM Payments (dos veces), Platform y TuPay Perú — trabajando en procesamiento de tarjetas (BIN checks, autorización y captura, tarjetas Multiplo), suscripciones basadas en tokens, e integraciones con proveedores de pago de LATAM (CIELO Brasil, WepayU México, Bind Argentina, entre otros)</li>
+                            <li data-lang="en">Comfortable operating in complex or undocumented systems: reconstructing flows from logs and tests, and coordinating across teams to ship fixes and new integrations</li>
+                            <li data-lang="es">Cómodo operando en sistemas complejos o poco documentados: reconstruyendo flujos a partir de logs y tests, y coordinando con otros equipos para entregar fixes e integraciones nuevas</li>
+                            <li data-lang="en">Maintained 15+ Java/Spring Boot microservices on Kubernetes, processing deposits and cashouts across multiple LATAM countries</li>
+                            <li data-lang="es">Mantuve más de 15 microservicios Java/Spring Boot sobre Kubernetes, procesando depósitos y cashouts en múltiples países de LATAM</li>
+                            <li data-lang="en">Used Claude Code day-to-day for code review, log correlation across services, and incident investigation</li>
+                            <li data-lang="es">Usé Claude Code día a día para revisión de código, correlación de logs entre servicios e investigación de incidentes</li>
                         </ul>
                         <div class="tech-pills">
                             <span class="tech-pill">Java 17</span>
@@ -977,7 +979,7 @@
                     <!-- Banco Credicoop -->
                     <div class="exp-item">
                         <div class="exp-header">
-                            <span class="exp-company">Banco Credicoop</span>
+                            <span class="exp-company">G&amp;L Group <span class="for-client">for Banco Credicoop</span></span>
                             <span class="exp-date">Jan 2020 – Jun 2021</span>
                         </div>
                         <div class="exp-role">
@@ -985,8 +987,8 @@
                             <span data-lang="es">Líder de Equipo y Desarrollador Java</span>
                         </div>
                         <ul class="exp-bullets">
-                            <li data-lang="en">Led the team responsible for the GUV validation system, resolving critical performance bottlenecks and delivering new regulatory requirements on schedule</li>
-                            <li data-lang="es">Lideré el equipo responsable del sistema de validación GUV, resolviendo cuellos de botella de rendimiento críticos y entregando nuevos requisitos regulatorios en tiempo</li>
+                            <li data-lang="en">Promoted to Team Lead of the GUV validation system, leading a team of 6 engineers, resolving critical performance bottlenecks and delivering new regulatory requirements on schedule</li>
+                            <li data-lang="es">Promovido a Líder de Equipo del sistema de validación GUV, liderando un equipo de 6 desarrolladores, resolviendo cuellos de botella de rendimiento críticos y entregando nuevos requisitos regulatorios en tiempo</li>
                         </ul>
                         <div class="tech-pills">
                             <span class="tech-pill">Java 8</span>
@@ -1019,22 +1021,25 @@
                     <div class="exp-item">
                         <div class="exp-header">
                             <span class="exp-company">Textil DaiVak SRL</span>
-                            <span class="exp-date">2013 – 2018</span>
+                            <span class="exp-date">Jan 2014 – May 2019</span>
                         </div>
                         <div class="exp-role">
-                            <span data-lang="en">Director of Operations</span>
-                            <span data-lang="es">Director de Operaciones</span>
+                            <span data-lang="en">Operations Manager</span>
+                            <span data-lang="es">Gerente de Operaciones</span>
                         </div>
                         <ul class="exp-bullets">
-                            <li data-lang="en">General manager of a family-owned textile company: ran the full operation — systems, facilities, sales team, and HR — through a period of sustained growth</li>
-                            <li data-lang="es">Gerente general de una PyME textil familiar: coordiné la operación completa de la empresa — sistemas, instalaciones, equipo comercial y recursos humanos — durante una etapa de crecimiento sostenido</li>
-                            <li data-lang="en">Negotiated directly with vendors and coordinated sales campaigns and strategy with the commercial team</li>
-                            <li data-lang="es">Negocié directamente con proveedores y coordiné campañas y estrategias de ventas con el equipo comercial</li>
+                            <li data-lang="en">Managed day-to-day operations of a family-owned textile company alongside ownership — purchasing decisions, warehouse, order fulfillment, and daily opening/closing</li>
+                            <li data-lang="es">Gestioné la operación diaria de una PyME textil familiar junto a los dueños — decisiones de compra, depósito, preparación y entrega de pedidos, y apertura y cierre</li>
+                            <li data-lang="en">Sold directly to key accounts and built out a sales team to grow reach; handled collections and vendor negotiation</li>
+                            <li data-lang="es">Vendí directamente a grandes clientes y armé un equipo de ventas para ampliar el alcance comercial; gestioné cobranzas y negociación con proveedores</li>
+                            <li data-lang="en">Led operational and systems changes to improve efficiency, managing the business through a growth phase and later a contraction, and sourced new business opportunities</li>
+                            <li data-lang="es">Lideré cambios operativos y de sistemas para mejorar la eficiencia, administrando la empresa durante una etapa de crecimiento y luego de contracción, y traje nuevas oportunidades de negocio</li>
                         </ul>
                         <div class="tech-pills">
-                            <span class="tech-pill">Team Management</span>
-                            <span class="tech-pill">Budget &amp; Vendor Management</span>
-                            <span class="tech-pill">Sales Operations</span>
+                            <span class="tech-pill">Purchasing &amp; Vendor Negotiation</span>
+                            <span class="tech-pill">Key Account Sales</span>
+                            <span class="tech-pill">Sales Team Building</span>
+                            <span class="tech-pill">Warehouse &amp; Logistics</span>
                         </div>
                     </div>
 
@@ -1055,6 +1060,17 @@
                                 <p class="exp-earlier-desc">
                                     <span data-lang="en">Led backend development for a telematics platform. Introduced Scrum practices to the team.</span>
                                     <span data-lang="es">Lideré el backend de una plataforma de telemática. Introduje prácticas Scrum al equipo.</span>
+                                </p>
+                            </details>
+                            <details>
+                                <summary>
+                                    <span><strong>JM Sistemas</strong>
+                                    — <span data-lang="en">Freelance Java Developer</span><span data-lang="es">Desarrollador Java Freelance</span>
+                                    <span style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-muted);margin-left:6px;">2007–2013</span></span>
+                                </summary>
+                                <p class="exp-earlier-desc">
+                                    <span data-lang="en">Independent freelance practice alongside full-time roles, building custom systems for small and medium businesses.</span>
+                                    <span data-lang="es">Práctica freelance independiente en paralelo a los roles de tiempo completo, construyendo sistemas a medida para pequeñas y medianas empresas.</span>
                                 </p>
                             </details>
                             <details>
