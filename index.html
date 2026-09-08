@@ -199,6 +199,7 @@
 
         /* ── SIDEBAR ── */
         .sidebar {
+            grid-column: 1;
             background: #1e293b;
             padding: 32px 24px;
             display: flex;
@@ -311,6 +312,7 @@
 
         /* ── MAIN ── */
         .main {
+            grid-column: 2;
             padding: 32px 36px;
             display: flex;
             flex-direction: column;
@@ -532,6 +534,7 @@
                 max-width: none;
             }
             .lang-btn { display: none; }
+            .print-hide { display: none !important; }
             .cv-header { padding: 20px 28px 18px; }
             .cv-header-left h1 { font-size: 1.5rem; }
             .cv-photo { width: 64px; height: 64px; }
@@ -539,6 +542,8 @@
             .skill-tags, .cert-item, .edu-item, .lang-item { break-inside: avoid; }
             .main { padding: 16px 28px; gap: 14px; }
             .section-title, .sidebar-section h2, .skill-category-label { letter-spacing: .2px !important; }
+            .section-title, .sidebar-section h2 { break-after: avoid; }
+            .summary-text { break-inside: avoid; }
             .experience-list { gap: 16px !important; }
             .exp-item { break-inside: avoid; }
             a { color: inherit; text-decoration: none; }
@@ -581,18 +586,18 @@
                         <span data-lang="es">Ingeniero Backend Senior — Java/Spring (20+ años, LATAM)</span>
                     </p>
                     <p class="tagline">
-                        <span data-lang="en">Telecom, gaming &amp; compensation systems — banking/payments since 2022 · Hands-on engineer &amp; team leader · AI-augmented practitioner (Claude Code)</span>
-                        <span data-lang="es">Telecom, gaming y sistemas de compensaciones — banca/pagos desde 2022 · Ingeniero hands-on y líder de equipo · Practicante de ingeniería asistida por IA (Claude Code)</span>
+                        <span data-lang="en">Banking &amp; payments across LATAM since 2022 · Founder &amp; engineer of TuFactura (production SaaS, built solo) · AI-augmented practitioner (Claude Code)</span>
+                        <span data-lang="es">Banca y pagos en LATAM desde 2022 · Fundador e ingeniero de TuFactura (SaaS en producción, construido en solitario) · Practicante de ingeniería asistida por IA (Claude Code)</span>
                     </p>
                 </div>
             </div>
             <div class="cv-header-right">
-                <div class="contact-item">
+                <div class="contact-item print-hide">
                     <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                     <a data-lang="en" href="cv/Jonathan%20Museri%20-%20Resume.pdf" download>Download Resume (PDF)</a>
                     <a data-lang="es" href="cv/Jonathan%20Museri%20-%20CV.pdf" download>Descargar CV (PDF)</a>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item print-hide">
                     <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
                     <a data-lang="en" href="cv/Jonathan%20Museri%20-%20Resume%20(Visual).pdf" download>Visual Resume (PDF)</a>
                     <a data-lang="es" href="cv/Jonathan%20Museri%20-%20CV%20(Visual).pdf" download>CV Visual (PDF)</a>
@@ -617,167 +622,7 @@
         </header>
 
         <!-- ═══════════════════════════════════════ SIDEBAR -->
-        <aside class="sidebar">
 
-            <!-- Skills -->
-            <div class="sidebar-section">
-                <h2><span data-lang="en">Technical Skills</span><span data-lang="es">Habilidades Técnicas</span></h2>
-
-                <div class="skill-category">
-                    <div class="skill-category-label">
-                        <span data-lang="en">AI-Augmented Engineering</span>
-                        <span data-lang="es">Ingeniería Asistida por IA</span>
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag green">Claude Code</span>
-                        <span class="skill-tag green">Custom Agents / Skills / Plugins</span>
-                        <span class="skill-tag green">Spec-Driven Development</span>
-                        <span class="skill-tag green">Multi-Agent Orchestration</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-label">Core</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag accent">Java 17/21</span>
-                        <span class="skill-tag accent">Spring Boot</span>
-                        <span class="skill-tag">Spring Data JPA</span>
-                        <span class="skill-tag">Hibernate</span>
-                        <span class="skill-tag">Lombok</span>
-                        <span class="skill-tag">Java Records</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Webhooks / IPNs</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-label">Cloud &amp; Infra</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag accent">AWS</span>
-                        <span class="skill-tag">Secrets Manager</span>
-                        <span class="skill-tag">Glue / EMR</span>
-                        <span class="skill-tag accent">Kubernetes</span>
-                        <span class="skill-tag">Kustomize</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Jenkins</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-label">Databases</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Amazon Redshift</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Elasticsearch</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-label">Observability</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag accent">New Relic</span>
-                        <span class="skill-tag accent">Grafana / Loki</span>
-                        <span class="skill-tag">NRQL</span>
-                        <span class="skill-tag">LogQL</span>
-                        <span class="skill-tag">Kibana</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-category-label">Messaging &amp; Arch</div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Kafka</span>
-                        <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">Event-Driven</span>
-                        <span class="skill-tag">Multi-Gateway Routing</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Education -->
-            <div class="sidebar-section">
-                <h2><span data-lang="en">Education</span><span data-lang="es">Educación</span></h2>
-                <div class="edu-item">
-                    <div class="degree">
-                        <span data-lang="en">Systems Licentiate Degree</span>
-                        <span data-lang="es">Licenciado en Sistemas</span>
-                    </div>
-                    <div class="institution">CAECE University</div>
-                    <div class="year">2007</div>
-                </div>
-                <div class="edu-item">
-                    <div class="degree">
-                        <span data-lang="en">System Analyst</span>
-                        <span data-lang="es">Analista de Sistemas</span>
-                    </div>
-                    <div class="institution">ORT Technological Institute</div>
-                    <div class="year">2001</div>
-                </div>
-                <div class="edu-item">
-                    <div class="degree">
-                        <span data-lang="en">Computer Technician</span>
-                        <span data-lang="es">Técnico en Computación</span>
-                    </div>
-                    <div class="institution">ORT Technical High School</div>
-                    <div class="year">1998</div>
-                </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="sidebar-section">
-                <h2><span data-lang="en">Languages</span><span data-lang="es">Idiomas</span></h2>
-                <div class="lang-item">
-                    <span class="lang-name">
-                        <span data-lang="en">Spanish</span>
-                        <span data-lang="es">Español</span>
-                    </span>
-                    <span class="lang-level">
-                        <span data-lang="en">Native</span>
-                        <span data-lang="es">Nativo</span>
-                    </span>
-                </div>
-                <div class="lang-item">
-                    <span class="lang-name">English</span>
-                    <span class="lang-level">C1 Advanced</span>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="sidebar-section">
-                <h2><span data-lang="en">Certifications</span><span data-lang="es">Certificaciones</span></h2>
-                <div class="cert-item">
-                    <div class="cert-dot"></div>
-                    <div>
-                        <span data-lang="en">DevOps Diploma — UNC</span>
-                        <span data-lang="es">Diplomatura DevOps — UNC</span>
-                        <br><span style="color:#64748b;font-size:.72rem;">2024 · <a href="MundosE Jonathan Museri.jpg" target="_blank">View</a></span>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-dot"></div>
-                    <div>
-                        EFSET English C1 Advanced
-                        <br><span style="color:#64748b;font-size:.72rem;">2022 · <a href="https://cert.efset.org/PmPJMV" target="_blank">View</a></span>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-dot"></div>
-                    <div>
-                        Certified Scrum Master — Scrum Alliance
-                        <br><span style="color:#64748b;font-size:.72rem;">2010 · <a href="Jonathan Museri-ScrumAlliance_CSM_Certificate.pdf" target="_blank">View</a></span>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-dot"></div>
-                    <div>Java Sun J2EE &amp; Web Services Developer <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
-                </div>
-            </div>
-
-        </aside>
-
-        <!-- ═══════════════════════════════════════ MAIN -->
         <main class="main">
 
             <!-- Summary -->
@@ -1139,6 +984,164 @@
                 </div>
             </section>
         </main>
+
+        <aside class="sidebar">
+
+            <!-- Skills -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Technical Skills</span><span data-lang="es">Habilidades Técnicas</span></h2>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">
+                        <span data-lang="en">AI-Augmented Engineering</span>
+                        <span data-lang="es">Ingeniería Asistida por IA</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag green">Claude Code</span>
+                        <span class="skill-tag green">Custom Agents / Skills / Plugins</span>
+                        <span class="skill-tag green">Spec-Driven Development</span>
+                        <span class="skill-tag green">Multi-Agent Orchestration</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Core</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag accent">Java 17/21</span>
+                        <span class="skill-tag accent">Spring Boot</span>
+                        <span class="skill-tag">Spring Data JPA</span>
+                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag">Lombok</span>
+                        <span class="skill-tag">Java Records</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Webhooks / IPNs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Cloud &amp; Infra</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag accent">AWS</span>
+                        <span class="skill-tag">Secrets Manager</span>
+                        <span class="skill-tag">Kustomize</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Databases</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Amazon Redshift</span>
+                        <span class="skill-tag">Elasticsearch</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Observability</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag accent">New Relic</span>
+                        <span class="skill-tag accent">Grafana / Loki</span>
+                        <span class="skill-tag">Sentry</span>
+                        <span class="skill-tag">Kibana</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-label">Messaging &amp; Arch</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">Event-Driven</span>
+                        <span class="skill-tag">Multi-Gateway Routing</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Education -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Education</span><span data-lang="es">Educación</span></h2>
+                <div class="edu-item">
+                    <div class="degree">
+                        <span data-lang="en">Systems Licentiate Degree</span>
+                        <span data-lang="es">Licenciado en Sistemas</span>
+                    </div>
+                    <div class="institution">CAECE University</div>
+                    <div class="year">2007</div>
+                </div>
+                <div class="edu-item">
+                    <div class="degree">
+                        <span data-lang="en">System Analyst</span>
+                        <span data-lang="es">Analista de Sistemas</span>
+                    </div>
+                    <div class="institution">ORT Technological Institute</div>
+                    <div class="year">2001</div>
+                </div>
+                <div class="edu-item">
+                    <div class="degree">
+                        <span data-lang="en">Computer Technician</span>
+                        <span data-lang="es">Técnico en Computación</span>
+                    </div>
+                    <div class="institution">ORT Technical High School</div>
+                    <div class="year">1998</div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Languages</span><span data-lang="es">Idiomas</span></h2>
+                <div class="lang-item">
+                    <span class="lang-name">
+                        <span data-lang="en">Spanish</span>
+                        <span data-lang="es">Español</span>
+                    </span>
+                    <span class="lang-level">
+                        <span data-lang="en">Native</span>
+                        <span data-lang="es">Nativo</span>
+                    </span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">C1 Advanced</span>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="sidebar-section">
+                <h2><span data-lang="en">Certifications</span><span data-lang="es">Certificaciones</span></h2>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <span data-lang="en">DevOps Diploma — UNC</span>
+                        <span data-lang="es">Diplomatura DevOps — UNC</span>
+                        <br><span style="color:#64748b;font-size:.72rem;">2024 · <a href="MundosE Jonathan Museri.jpg" target="_blank">View</a></span>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>
+                        EFSET English C1 Advanced
+                        <br><span style="color:#64748b;font-size:.72rem;">2022 · <a href="https://cert.efset.org/PmPJMV" target="_blank">View</a></span>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>
+                        Certified Scrum Master — Scrum Alliance
+                        <br><span style="color:#64748b;font-size:.72rem;">2010 · <a href="Jonathan Museri-ScrumAlliance_CSM_Certificate.pdf" target="_blank">View</a></span>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-dot"></div>
+                    <div>Java Sun J2EE &amp; Web Services Developer <span style="color:#64748b;font-size:.72rem;">(2008)</span></div>
+                </div>
+            </div>
+
+        </aside>
 
     </div><!-- .page -->
 
