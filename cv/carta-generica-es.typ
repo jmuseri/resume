@@ -21,9 +21,9 @@ Me postulo para posiciones de desarrollo backend Java. Tengo más de 20 años de
 
 Además de esa profundidad técnica, en paralelo diseño, desarrollo y opero en producción TuFactura, un SaaS propio de facturación, donde soy el único responsable de punta a punta: desde el diseño de APIs hasta el despliegue y el soporte. Esa experiencia de ownership real — tomar un problema, resolverlo y sostenerlo en producción sin esperar que sea "trabajo de otro" — es la lógica de autonomía y compromiso con el resultado que busco replicar en un nuevo equipo.
 
-Vivo en Buenos Aires y tengo disponibilidad para modalidad remota, híbrida o presencial según la posición.
+Vivo en Buenos Aires y la ubicación o la modalidad de trabajo no son una limitación para mí — remoto, híbrido o presencial, cualquiera me sirve.
 
-Quedo a disposición para conversar sobre cómo mi experiencia en desarrollo backend Java para el sector financiero puede aportar al equipo. Muchas gracias por la consideración.
+Busco un rol de largo plazo donde pueda seguir construyendo y siendo dueño de los resultados, y quedo a disposición para conversar sobre cómo mi experiencia en desarrollo backend Java para el sector financiero puede aportar al equipo. Muchas gracias por la consideración.
 
 Saludos cordiales,
 
