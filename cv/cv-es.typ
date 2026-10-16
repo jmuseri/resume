@@ -11,6 +11,7 @@
   contacts: (
     (text: "linkedin.com/in/jonathanmuseri", link: "https://www.linkedin.com/in/jonathanmuseri/"),
     (text: "jmuseri@gmail.com", link: "mailto:jmuseri@gmail.com"),
+    (text: "+54 11 5751 0068", link: "tel:+541157510068"),
   ),
 )
 
@@ -26,7 +27,7 @@
   location: "Remoto",
   date: "May 2026 – Presente",
   description: [
-    - Diseñé, construí y lancé un SaaS en producción de punta a punta como único ingeniero — facturación, recurrencias, integración fiscal (ARCA), notificaciones, portales de contadores/afiliados — con flujo spec-driven
+    - Diseñé, construí y lancé un SaaS en producción de punta a punta como único ingeniero — backend Java/Spring Boot, frontend React/TypeScript, integración fiscal (ARCA), notificaciones, portales de contadores/afiliados — con flujo de desarrollo spec-driven asistido por agentes de IA (Claude Code)
   ],
 )
 
@@ -110,7 +111,7 @@
 #section("Habilidades y Educación")
 #oneline-title-item(
   title: "Habilidades",
-  content: [Java 17/21, Spring Boot, Hibernate, Kafka, Microservicios · Spring Security, JWT, OAuth2 · MySQL, Flyway · AWS, Kubernetes, Docker · Grafana, New Relic · IA asistida (Claude Code) · Liderazgo técnico],
+  content: [Java 17/21, Spring Boot, Hibernate, Kafka, Microservicios · Spring Security, JWT, OAuth2 · MySQL, SQL Server, Oracle, PostgreSQL, Flyway · Maven, Gradle · AWS, Kubernetes, Docker · Grafana, New Relic, OpenTelemetry · IA asistida (Claude Code) · Liderazgo técnico],
 )
 #oneline-title-item(
   title: "Educación y Certificaciones",

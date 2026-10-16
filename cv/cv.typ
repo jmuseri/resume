@@ -11,6 +11,7 @@
   contacts: (
     (text: "linkedin.com/in/jonathanmuseri", link: "https://www.linkedin.com/in/jonathanmuseri/"),
     (text: "jmuseri@gmail.com", link: "mailto:jmuseri@gmail.com"),
+    (text: "+54 11 5751 0068", link: "tel:+541157510068"),
   ),
 )
 
@@ -26,7 +27,7 @@
   location: "Remote",
   date: "May 2026 – Present",
   description: [
-    - Designed, built, and shipped a production SaaS solo — invoicing, recurring billing, ARCA tax integration, notifications, accountant/affiliate portals — on a spec-driven workflow backed by 10+ internal tools
+    - Designed, built, and shipped a production SaaS solo — Java/Spring Boot backend, React/TypeScript frontend, ARCA tax integration, notifications, accountant/affiliate portals — on an AI-agent-assisted, spec-driven workflow backed by 10+ internal tools
   ],
 )
 
@@ -110,7 +111,7 @@
 #section("Skills & Education")
 #oneline-title-item(
   title: "Skills",
-  content: [Java 17/21, Spring Boot, Hibernate, Kafka, Microservices, REST APIs · Spring Security, JWT, OAuth2 · MySQL, Flyway · AWS, Kubernetes, Docker · Grafana, New Relic · AI-assisted dev (Claude Code) · Tech leadership],
+  content: [Java 17/21, Spring Boot, Hibernate, Kafka, Microservices, REST APIs · Spring Security, JWT, OAuth2 · MySQL, SQL Server, Oracle, PostgreSQL, Flyway · Maven, Gradle · AWS, Kubernetes, Docker · Grafana, New Relic, OpenTelemetry · AI-assisted dev (Claude Code) · Tech leadership],
 )
 #oneline-title-item(
   title: "Education & Certifications",
